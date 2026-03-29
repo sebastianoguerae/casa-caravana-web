@@ -1545,6 +1545,8 @@
       "petsAllowed": false,
       "checkinTime": "15:00",
       "checkoutTime": "11:00",
+      "telephone": "+525554304034",
+      "email": "mariana@lacaravanacreativa.com",
       "availableLanguage": ["en", "es"],
       "sameAs": [
         "https://es-l.airbnb.com/rooms/1211768589707757419",
@@ -2187,11 +2189,11 @@
                 </div>
                 <div class="contact-detail">
                     <div class="contact-detail-label">Email</div>
-                    <p><a href="mailto:hola@casacaravana.com">hola@casacaravana.com</a></p>
+                    <p><a href="mailto:mariana@lacaravanacreativa.com">mariana@lacaravanacreativa.com</a></p>
                 </div>
                 <div class="contact-detail">
                     <div class="contact-detail-label">WhatsApp</div>
-                    <p><a href="https://wa.me/message" data-en="Contact us on WhatsApp" data-es="Cont&aacute;ctanos por WhatsApp">Contact us on WhatsApp</a></p>
+                    <p><a href="https://wa.me/525554304034" target="_blank" rel="noopener">+52 55 5430 4034</a></p>
                 </div>
                 <div class="contact-links">
                     <h4 data-en="Reserve your stay" data-es="Reserva tu estancia">Reserve your stay</h4>
@@ -2213,13 +2215,16 @@
                     </a>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="event.preventDefault();">
-                <input type="text" id="formName" placeholder="Full name" required data-en-placeholder="Full name" data-es-placeholder="Nombre completo" aria-label="Full name">
-                <input type="email" id="formEmail" placeholder="Email" required data-en-placeholder="Email" data-es-placeholder="Email" aria-label="Email">
-                <input type="text" id="formDates" placeholder="Dates of interest" data-en-placeholder="Dates of interest" data-es-placeholder="Fechas de inter&eacute;s" aria-label="Dates of interest">
-                <input type="text" id="formGuests" placeholder="Number of guests" data-en-placeholder="Number of guests" data-es-placeholder="N&uacute;mero de hu&eacute;spedes" aria-label="Number of guests">
-                <textarea id="formMessage" placeholder="Tell us about your trip..." rows="4" data-en-placeholder="Tell us about your trip..." data-es-placeholder="Cu&eacute;ntanos sobre tu viaje..." aria-label="Tell us about your trip"></textarea>
+            <form class="contact-form" action="https://formspree.io/f/mariana@lacaravanacreativa.com" method="POST" id="contactForm">
+                <input type="text" name="name" id="formName" placeholder="Full name" required data-en-placeholder="Full name" data-es-placeholder="Nombre completo" aria-label="Full name">
+                <input type="email" name="email" id="formEmail" placeholder="Email" required data-en-placeholder="Email" data-es-placeholder="Email" aria-label="Email">
+                <input type="text" name="dates" id="formDates" placeholder="Dates of interest" data-en-placeholder="Dates of interest" data-es-placeholder="Fechas de inter&eacute;s" aria-label="Dates of interest">
+                <input type="text" name="guests" id="formGuests" placeholder="Number of guests" data-en-placeholder="Number of guests" data-es-placeholder="N&uacute;mero de hu&eacute;spedes" aria-label="Number of guests">
+                <textarea name="message" id="formMessage" placeholder="Tell us about your trip..." rows="4" data-en-placeholder="Tell us about your trip..." data-es-placeholder="Cu&eacute;ntanos sobre tu viaje..." aria-label="Tell us about your trip"></textarea>
+                <input type="hidden" name="_subject" value="New inquiry from Casa Caravana website">
+                <input type="hidden" name="_next" value="https://sebastianoguerae.github.io/casa-caravana-web/?thanks=true">
                 <button type="submit" data-en="Send inquiry" data-es="Enviar mensaje">Send inquiry</button>
+                <div id="formSuccess" style="display:none; font-size:0.85rem; color:#6B8F6B; margin-top:1rem;" data-en="Thank you! We'll get back to you soon." data-es="&iexcl;Gracias! Te responderemos pronto.">Thank you! We'll get back to you soon.</div>
             </form>
         </div>
     </section>
@@ -2244,6 +2249,12 @@
             <div class="footer-partner">
                 <p data-en="A sister project of" data-es="Un proyecto hermano de">A sister project of</p>
                 <a href="https://www.lacaravanacreativa.com/" target="_blank" rel="noopener">La Caravana Creativa</a>
+                <div style="margin-top: 1rem; display: flex; gap: 0.8rem;">
+                    <a href="https://www.instagram.com/casa_caravana_boutique/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--accent);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        @casa_caravana_boutique
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
