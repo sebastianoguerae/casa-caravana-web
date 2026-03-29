@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Caravana — Boutique Residences in Polanco | Mexico City</title>
+    <meta name="description" content="Four boutique residences — each named after a grandmother — in a beautifully renovated Mexican casa, steps from Polanco, Mexico City.">
+    <meta property="og:title" content="Casa Caravana — Boutique Residences in Polanco, Mexico City">
+    <meta property="og:description" content="Four boutique residences in a beautifully renovated Mexican casa, steps from Polanco. Superhost with 195+ reviews.">
+    <meta property="og:image" content="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3da6d761-e423-45e1-b813-86de951aed65.jpg">
+    <meta property="og:url" content="https://casacaravana.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_MX">
+    <meta property="og:site_name" content="Casa Caravana">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa Caravana — Boutique Residences in Polanco, CDMX">
+    <meta name="twitter:description" content="Boutique residences steps from Polanco. 4.91 stars, Superhost.">
+    <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3da6d761-e423-45e1-b813-86de951aed65.jpg">
+    <link rel="alternate" hreflang="en" href="https://casacaravana.com">
+    <link rel="alternate" hreflang="es" href="https://casacaravana.com?lang=es">
+    <link rel="alternate" hreflang="x-default" href="https://casacaravana.com">
+    <link rel="canonical" href="https://casacaravana.com">
+    <link rel="icon" type="image/jpeg" href="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_32,h_32,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FDFBF9;
+            --bg-alt: #F5F0EC;
+            --accent: #C08B7A;
+            --accent-text: #8B6355;
+            --accent-hover: #A8756A;
+            --text: #2B2B2B;
+            --text-body: #5C5650;
+            --text-light: #9A948D;
+            --divider: #E8E2DB;
+            --gold: #C4A265;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: var(--text-body);
+            background: var(--bg);
+            line-height: 2.0;
+            font-size: 1rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.15;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── NAVIGATION ─── */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(253, 251, 249, 0.97);
+            box-shadow: 0 1px 0 var(--divider);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .nav-logo-img {
+            height: 32px;
+            width: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .nav-logo-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.4);
+            transition: background 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-divider {
+            background: var(--divider);
+        }
+
+        .nav-logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .nav-logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #fff;
+            transition: color 0.4s ease;
+        }
+
+        .nav-logo-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-text {
+            color: var(--text);
+        }
+
+        .nav.scrolled .nav-logo-subtitle {
+            color: var(--text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--text-body);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav.scrolled .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links .btn-reservar {
+            padding: 0.55rem 1.5rem;
+            border: 1px solid var(--accent-text);
+            color: var(--accent-text);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links .btn-reservar:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .lang-switcher {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .lang-switcher {
+            color: var(--text-body);
+        }
+
+        .lang-switcher a {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lang-switcher a:hover {
+            color: var(--accent);
+        }
+
+        .lang-switcher a.active {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 1.5px;
+            background: #fff;
+            transition: background 0.4s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        .nav.scrolled .hamburger span {
+            background: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        /* ─── HERO ─── */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.30), transparent);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 6rem;
+            left: 3rem;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: scrollPulse 2s ease infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 16px;
+            height: 16px;
+            stroke: rgba(255,255,255,0.5);
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.5; transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ─── INTRO ─── */
+
+        .intro {
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .intro-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            line-height: 2.1;
+            color: var(--text-body);
+        }
+
+        .thin-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--divider);
+            margin: 4rem auto 0;
+        }
+
+        /* ─── OUR STORY ─── */
+
+        .our-story {
+            padding: 6rem 2rem 10rem;
+            text-align: center;
+        }
+
+        .our-story-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .our-story p {
+            font-size: 0.98rem;
+            line-height: 2.1;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
+        }
+
+        .our-story p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .grandmothers-line {
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+
+        .grandmothers-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .grandmothers-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin: 1rem auto;
+        }
+
+        .grandmothers-caption {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── FULL WIDTH IMAGE BREAK ─── */
+
+        .image-break {
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        /* ─── PROPERTIES ─── */
+
+        .properties {
+            padding: 10rem 2rem;
+        }
+
+        .properties-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 6rem;
+        }
+
+        .property-row {
+            display: flex;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 4rem;
+            margin-bottom: 8rem;
+        }
+
+        .property-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .property-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .property-image {
+            flex: 0 0 58%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            transition: transform 0.6s ease;
+        }
+
+        .property-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .property-text {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .property-name {
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            margin-bottom: 0.3rem;
+        }
+
+        .property-type {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--accent-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .property-meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .property-rating {
+            color: var(--gold);
+        }
+
+        .property-specs {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .property-desc {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .property-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .property-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .property-link svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .property-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* ─── DETAILS MOSAIC ─── */
+
+        .details {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .details-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-item {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .detail-item:nth-child(2) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item:nth-child(5) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item img {
+            transition: transform 0.6s ease;
+        }
+
+        .detail-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .detail-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(43, 43, 43, 0);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            transition: background 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay {
+            background: rgba(43, 43, 43, 0.3);
+        }
+
+        .detail-overlay span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── LOCATION ─── */
+
+        .location {
+            padding: 10rem 2rem;
+        }
+
+        .location-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .location-places {
+            padding-top: 1rem;
+        }
+
+        .location-place {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--divider);
+            font-size: 0.92rem;
+        }
+
+        .location-place:first-child {
+            padding-top: 0;
+        }
+
+        .location-time {
+            color: var(--accent-text);
+            font-size: 0.82rem;
+        }
+
+        .location-map {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--bg-alt);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-note {
+            max-width: 700px;
+            margin: 4rem auto 0;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── REVIEWS ─── */
+
+        .reviews {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .reviews-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review-item {
+            padding: 2rem 0;
+        }
+
+        .review-quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .reviews-stats {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .reviews-stats span {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .reviews-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .reviews-more a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--accent-text);
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .reviews-more a:hover {
+            color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        /* ─── CONTACT ─── */
+
+        .contact {
+            padding: 10rem 2rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail-label {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p {
+            font-size: 0.92rem;
+        }
+
+        .contact-detail a {
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent-hover);
+        }
+
+        .contact-links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .contact-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            font-size: 0.88rem;
+            color: var(--text-body);
+            border-bottom: 1px solid var(--divider);
+            transition: color 0.3s ease;
+        }
+
+        .contact-link-item:hover {
+            color: var(--accent);
+        }
+
+        .contact-link-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 1px solid var(--divider);
+            background: transparent;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            align-self: flex-start;
+            padding: 0.9rem 2.5rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ─── FOOTER ─── */
+
+        .footer {
+            background: var(--bg-alt);
+            padding: 5rem 3rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            justify-self: center;
+        }
+
+        .footer-nav a {
+            font-size: 0.82rem;
+            color: var(--text-body);
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent);
+        }
+
+        .footer-partner {
+            justify-self: end;
+            text-align: right;
+        }
+
+        .footer-partner p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-partner a {
+            font-size: 0.82rem;
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .footer-partner a:hover {
+            color: var(--accent-hover);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* ─── PERSISTENT BOOKING BAR ─── */
+
+        .booking-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            height: 50px;
+            background: rgba(253, 251, 249, 0.97);
+            border-top: 1px solid var(--divider);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+        }
+
+        .booking-bar p {
+            font-size: 0.82rem;
+            color: var(--text-body);
+        }
+
+        .booking-bar a {
+            padding: 0.45rem 1.8rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .booking-bar a:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ─── RESPONSIVE ─── */
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                bottom: 5rem;
+                left: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 10vw, 3.5rem);
+            }
+
+            .intro {
+                padding: 6rem 1.5rem;
+            }
+
+            .our-story {
+                padding: 3rem 1.5rem 6rem;
+            }
+
+            .properties {
+                padding: 6rem 1.5rem;
+            }
+
+            .properties-header {
+                margin-bottom: 4rem;
+            }
+
+            .property-row,
+            .property-row.reverse {
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 5rem;
+            }
+
+            .property-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .property-text {
+                padding: 0 0.5rem;
+            }
+
+            .details {
+                padding: 6rem 1.5rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .location {
+                padding: 6rem 1.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .location-map {
+                aspect-ratio: 16 / 10;
+            }
+
+            .reviews {
+                padding: 6rem 1.5rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact {
+                padding: 6rem 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .footer {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-nav {
+                justify-self: start;
+            }
+
+            .footer-partner {
+                justify-self: start;
+                text-align: left;
+            }
+
+            .booking-bar {
+                display: none;
+            }
+
+            .image-break {
+                height: 50vh;
+            }
+
+            .section-title {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+        }
+
+        /* Body padding for booking bar on desktop */
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 50px;
+            }
+        }
+        /* ─── NEIGHBORHOOD GUIDE ─── */
+
+        .neighborhood-guide {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .neighborhood-guide-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .guide-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .guide-item p {
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── EXPERIENCES / SERVICES ─── */
+
+        .experiences {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .experiences-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .experience-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1.5rem;
+            color: var(--accent);
+        }
+
+        .experience-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--accent);
+            fill: none;
+        }
+
+        .experience-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card p {
+            font-size: 0.92rem;
+            line-height: 1.9;
+        }
+
+        /* ─── FAQ ACCORDION ─── */
+
+        .faq {
+            padding: 10rem 2rem;
+            background: var(--bg);
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            font-weight: 200;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-body);
+        }
+
+        @media (max-width: 768px) {
+            .neighborhood-guide {
+                padding: 6rem 1.5rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .experiences {
+                padding: 6rem 1.5rem;
+            }
+
+            .experiences-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq {
+                padding: 6rem 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ─── STATS BAR ─── */
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── BOTANICAL ELEMENTS ─── */
+
+        .botanical-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto;
+            max-width: 200px;
+        }
+
+        .botanical-divider svg {
+            width: 24px;
+            height: 24px;
+            opacity: 0.35;
+        }
+
+        .botanical-divider .line {
+            flex: 1;
+            height: 1px;
+            background: var(--divider);
+        }
+
+        .section-botanical {
+            position: absolute;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .botanical-accent {
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 0.4;
+            margin: 0 0.3rem;
+        }
+
+        .botanical-stamp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--divider);
+            border-radius: 50%;
+            padding: 16px;
+            opacity: 0.5;
+        }
+
+        .botanical-stamp svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .property-botanical {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .intro-inner .botanical-corner {
+            display: block;
+            margin: 2rem auto 0;
+            opacity: 0.25;
+        }
+
+        /* Plants badge for property cards */
+        .plants-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #6B8F6B;
+            margin-top: 1rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba(107, 143, 107, 0.25);
+            border-radius: 2px;
+        }
+
+        .plants-badge svg {
+            width: 14px;
+            height: 14px;
+            stroke: #6B8F6B;
+            fill: none;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Casa Caravana Boutique Residences",
+      "url": "https://casacaravana.com",
+      "description": "Four boutique residences in a beautifully renovated classic Mexican casa, steps from Polanco, Mexico City. Each apartment is named after a grandmother.",
+      "image": "https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3da6d761-e423-45e1-b813-86de951aed65.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Descartes 47",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "11560",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.4296,
+        "longitude": -99.1776
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.91",
+        "reviewCount": "195",
+        "bestRating": "5"
+      },
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Fiber-optic WiFi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Free parking", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Full kitchen", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Private terrace", "value": true}
+      ],
+      "numberOfRooms": 4,
+      "petsAllowed": false,
+      "checkinTime": "15:00",
+      "checkoutTime": "11:00",
+      "availableLanguage": ["en", "es"],
+      "sameAs": [
+        "https://es-l.airbnb.com/rooms/1211768589707757419",
+        "https://es-l.airbnb.com/rooms/1209567715223945602",
+        "https://es-l.airbnb.com/rooms/1193042271718383527",
+        "https://es-l.airbnb.com/rooms/1178241359335603327"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where is Casa Caravana located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are at Descartes 47, steps from Polanco, the Museum of Anthropology, and Chapultepec Forest in Mexico City."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many residences does Casa Caravana have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We have four residences: Cecilia (3 bedrooms, 8 guests), María Elvira (2 bedrooms, 6 guests), Isabel (studio, 2 guests), and Martha (studio with balcony, 2 guests)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have parking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer free on-site parking — a rare find in the Polanco area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does check-in work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer self check-in with high-security electronic locks. We send detailed instructions before your arrival so the process is seamless."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the apartments family-friendly for babies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have a Baby Kit that includes a crib, baby bath, and high chair. Just let us know in advance so we can have it ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have WiFi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all residences have high-speed fiber-optic internet, ideal for remote work or streaming."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is near Casa Caravana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Polanco is a 5-minute walk, Museum of Anthropology 10 minutes, Chapultepec Forest 12 minutes, restaurants and cafés 2 minutes. There is a convenience store on the corner where you can easily pick up a local SIM card."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer additional services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can arrange in-home massages, manicures, grocery delivery, private transportation, and city guides. We also provide personalized local recommendations for restaurants, markets, and experiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the check-in and check-out times?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check-in is from 3:00 PM and check-out is by 11:00 AM. We offer self check-in with electronic locks, so you can arrive on your own schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cancellation policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cancellation policies vary by residence and dates. Please check the specific listing on Airbnb for current terms, or contact us directly for flexibility on longer stays."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do the apartments have air conditioning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all four residences have split-system air conditioning for year-round comfort."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ─── NAVIGATION ─── -->
+    <nav class="nav" id="nav">
+        <a href="#" class="nav-logo">
+            <img class="nav-logo-img" src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Casa Caravana elephant logo">
+            <span class="nav-logo-divider"></span>
+            <span class="nav-logo-text-group">
+                <span class="nav-logo-text">Casa Caravana</span>
+                <span class="nav-logo-subtitle">Boutique Residences</span>
+            </span>
+        </a>
+        <div class="nav-links">
+            <a href="#espacios" data-en="Our Spaces" data-es="Espacios">Our Spaces</a>
+            <a href="#barrio" data-en="The Neighborhood" data-es="El Barrio">The Neighborhood</a>
+            <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
+            <span class="lang-switcher">
+                <a href="#" role="button" id="langEN" class="active" onclick="setLang('en')">EN</a> / <a href="#" role="button" id="langES" onclick="setLang('es')">ES</a>
+            </span>
+            <a href="#contacto" class="btn-reservar" data-en="Book Now" data-es="Reservar">Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ─── MOBILE MENU ─── -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#espacios" onclick="closeMenu()" data-en="Our Spaces" data-es="Espacios">Our Spaces</a>
+        <a href="#barrio" onclick="closeMenu()" data-en="The Neighborhood" data-es="El Barrio">The Neighborhood</a>
+        <a href="#contacto" onclick="closeMenu()" data-en="Contact" data-es="Contacto">Contact</a>
+        <span class="lang-switcher" style="font-family:'Montserrat',sans-serif; font-size:0.85rem; color:var(--text-light);">
+            <a href="#" role="button" id="langENMobile" class="active" onclick="setLang('en')" style="font-size:0.85rem;">EN</a> / <a href="#" role="button" id="langESMobile" onclick="setLang('es')" style="font-size:0.85rem;">ES</a>
+        </span>
+        <a href="#contacto" onclick="closeMenu()" style="font-size:1rem; font-family:'Montserrat',sans-serif; letter-spacing:3px; text-transform:uppercase; padding:0.7rem 2rem; border:1px solid var(--accent); color:var(--accent);" data-en="Book Now" data-es="Reservar">Book Now</a>
+    </div>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/22063d0f-1a84-4cd9-ae9e-41ff602fe51c.jpeg" alt="Terrace at Casa Caravana Boutique Residences">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-en="Polanco, Mexico City" data-es="Polanco, Ciudad de M&eacute;xico">Polanco, Mexico City</div>
+            <h1 class="hero-title">Casa Caravana</h1>
+            <div class="hero-subtitle" data-en="Boutique Residences" data-es="Boutique Residences">Boutique Residences</div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round">
+                <path d="M8 2 L8 14 M3 9 L8 14 L13 9"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ─── INTRODUCTION ─── -->
+    <section class="intro">
+        <div class="intro-inner fade-in-up">
+            <span class="label" data-en="Welcome" data-es="Bienvenidos">Welcome</span>
+            <p data-en="Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, steps from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive." data-es="Cuatro residencias de dise&ntilde;o &mdash; cada una nombrada en honor a una abuela &mdash; en una casa mexicana llena de plantas y luz, completamente renovada, a pasos de Polanco. Cada detalle ha sido cuidado, desde las s&aacute;banas de alto gramaje hasta las recomendaciones locales, para que te sientas en casa desde el primer momento.">Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, steps from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive.</p>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">4.91</span>
+                    <span class="stat-label" data-en="Rating" data-es="Calificaci&oacute;n">Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">195+</span>
+                    <span class="stat-label" data-en="Reviews" data-es="Rese&ntilde;as">Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label" data-en="Residences" data-es="Residencias">Residences</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">&#9733;</span>
+                    <span class="stat-label">Superhost</span>
+                </div>
+            </div>
+            <div class="botanical-divider">
+                <span class="line"></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C08B7A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4-3-8-8-8-13a8 8 0 0116 0c0 5-4 10-8 13z"/><path d="M12 22V9"/><path d="M8 13c2-1 3-3 4-5"/><path d="M16 13c-2-1-3-3-4-5"/></svg>
+                <span class="line"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── OUR STORY ─── -->
+    <section class="our-story">
+        <div class="our-story-inner fade-in-up">
+            <span class="label" data-en="Our Story" data-es="Nuestra Historia">Our Story</span>
+            <h2 class="section-title" data-en="The way our grandmothers made us feel" data-es="Como nos hac&iacute;an sentir nuestras abuelas">The way our grandmothers made us feel</h2>
+            <p data-en="When we were children, there was nothing quite like arriving at our grandmothers' homes. The smell of something cooking, a bed made just for you, fresh towels laid out as if you were the most important guest in the world. Plants on every windowsill, flowers on the table &mdash; their homes were always alive. Cecilia, Mar&iacute;a Elvira, Isabel, and Martha &mdash; four women who turned ordinary visits into extraordinary memories through the quiet art of making someone feel completely at home." data-es="Cuando &eacute;ramos ni&ntilde;os, no hab&iacute;a nada como llegar a la casa de nuestras abuelas. El olor a algo cocin&aacute;ndose, una cama preparada solo para ti, toallas limpias dispuestas como si fueras el invitado m&aacute;s importante del mundo. Plantas en cada ventana, flores en la mesa &mdash; sus casas siempre estaban vivas. Cecilia, Mar&iacute;a Elvira, Isabel y Martha &mdash; cuatro mujeres que transformaban visitas ordinarias en recuerdos extraordinarios con el arte silencioso de hacer que alguien se sienta completamente en casa.">When we were children, there was nothing quite like arriving at our grandmothers' homes. The smell of something cooking, a bed made just for you, fresh towels laid out as if you were the most important guest in the world. Plants on every windowsill, flowers on the table &mdash; their homes were always alive. Cecilia, Mar&iacute;a Elvira, Isabel, and Martha &mdash; four women who turned ordinary visits into extraordinary memories through the quiet art of making someone feel completely at home.</p>
+            <p data-en="We built Casa Caravana to capture that feeling. Every apartment carries the name and personality of one of our grandmothers &mdash; not as a tribute on a wall, but as a living philosophy in every detail. The way the linens are chosen, the coffee waiting in the kitchen, the neighborhood guide on your nightstand. These are gestures we learned from watching them care for the people they loved." data-es="Construimos Casa Caravana para capturar esa sensaci&oacute;n. Cada departamento lleva el nombre y la personalidad de una de nuestras abuelas &mdash; no como un tributo en la pared, sino como una filosof&iacute;a viva en cada detalle. La manera en que se eligen las s&aacute;banas, el caf&eacute; esper&aacute;ndote en la cocina, la gu&iacute;a del barrio en tu mesa de noche. Son gestos que aprendimos vi&eacute;ndolas cuidar a las personas que amaban.">We built Casa Caravana to capture that feeling. Every apartment carries the name and personality of one of our grandmothers &mdash; not as a tribute on a wall, but as a living philosophy in every detail. The way the linens are chosen, the coffee waiting in the kitchen, the neighborhood guide on your nightstand. These are gestures we learned from watching them care for the people they loved.</p>
+            <p data-en="Mariana, our host and Superhost with 195+ reviews and a 4.91 rating, carries this spirit forward every single day. When you stay with us, you are not arriving at just another place in Mexico City. You are being welcomed the way our grandmothers welcomed us &mdash; with warmth, attention, and the kind of care that makes you feel like family." data-es="Mariana, nuestra anfitriona y Superhost con m&aacute;s de 195 rese&ntilde;as y una calificaci&oacute;n de 4.91, lleva este esp&iacute;ritu adelante cada d&iacute;a. Cuando te hospedas con nosotros, no est&aacute;s llegando a un lugar m&aacute;s en la Ciudad de M&eacute;xico. Te damos la bienvenida como nuestras abuelas nos recib&iacute;an &mdash; con calidez, atenci&oacute;n y ese tipo de cuidado que te hace sentir parte de la familia.">Mariana, our host and Superhost with 195+ reviews and a 4.91 rating, carries this spirit forward every single day. When you stay with us, you are not arriving at just another place in Mexico City. You are being welcomed the way our grandmothers welcomed us &mdash; with warmth, attention, and the kind of care that makes you feel like family.</p>
+            <div class="grandmothers-line">
+                <div class="grandmothers-names">Cecilia &mdash; Mar&iacute;a Elvira &mdash; Isabel &mdash; Martha</div>
+                <div style="margin: 1.2rem auto; text-align: center;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C08B7A" stroke-width="1" stroke-linecap="round" style="opacity: 0.5;"><path d="M12 22V2"/><path d="M8 6c2 1 3 3 4 5"/><path d="M16 6c-2 1-3 3-4 5"/><path d="M7 11c2 0.5 3 2 5 4"/><path d="M17 11c-2 0.5-3 2-5 4"/><path d="M8 16c2 0.5 3 1.5 4 3"/><path d="M16 16c-2 0.5-3 1.5-4 3"/></svg>
+                </div>
+                <div class="grandmothers-caption" data-en="Our grandmothers" data-es="Nuestras abuelas">Our grandmothers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FULL-WIDTH IMAGE BREAK ─── -->
+    <div class="image-break">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg" alt="Exterior terrace at Casa Caravana" loading="lazy">
+    </div>
+
+    <!-- ─── PROPERTIES ─── -->
+    <section class="properties" id="espacios">
+        <div class="properties-header fade-in-up">
+            <span class="label" data-en="Our Spaces" data-es="Nuestros Espacios">Our Spaces</span>
+            <h2 class="section-title" data-en="Four ways to live the city" data-es="Cuatro maneras de vivir la ciudad">Four ways to live the city</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 4rem; opacity: 0.15;">
+            <svg width="180" height="24" viewBox="0 0 120 24" fill="none" stroke="#C08B7A" stroke-width="0.8" stroke-linecap="round"><path d="M0 12 Q15 4, 30 12 Q45 20, 60 12 Q75 4, 90 12 Q105 20, 120 12"/><path d="M15 8c-2-3-1-5 1-4s1 3 0 4"/><path d="M45 16c-2 3-1 5 1-4s1-3 0-4"/><path d="M75 8c-2-3-1-5 1-4s1 3 0 4"/><path d="M105 16c-2 3-1 5 1 4s1-3 0-4"/></svg>
+        </div>
+
+        <!-- Cecilia (formerly Residencia Terraza) -->
+        <div class="property-row fade-in-up">
+            <div class="property-image">
+                <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3da6d761-e423-45e1-b813-86de951aed65.jpg" alt="Cecilia Residence" loading="lazy">
+            </div>
+            <div class="property-text">
+                <h3 class="property-name">Cecilia</h3>
+                <div class="property-type" data-en="Three-Bedroom Residence &middot; 8 guests" data-es="Residencia de tres habitaciones &middot; 8 hu&eacute;spedes">Three-Bedroom Residence &middot; 8 guests</div>
+                <div class="property-meta">
+                    <span class="property-rating">&#9733; 4.96</span>
+                    <span data-en="(49 reviews)" data-es="(49 rese&ntilde;as)">(49 reviews)</span>
+                </div>
+                <p class="property-desc" data-en="Three terraces to share morning coffee or an evening toast. Ground-floor access — no stairs, no elevator needed. Our flagship residence &mdash; named after a grandmother who always set the biggest table and made sure no guest left without a full heart." data-es="Tres terrazas para compartir un caf&eacute; por la ma&ntilde;ana o un brindis al atardecer. Acceso en planta baja — sin escaleras, sin necesidad de elevador. Nuestra residencia insignia &mdash; nombrada en honor a una abuela que siempre pon&iacute;a la mesa m&aacute;s grande y se aseguraba de que ning&uacute;n invitado se fuera sin el coraz&oacute;n lleno.">Three terraces to share morning coffee or an evening toast. Ground-floor access — no stairs, no elevator needed. Our flagship residence &mdash; named after a grandmother who always set the biggest table and made sure no guest left without a full heart.</p>
+                <a href="https://es-l.airbnb.com/rooms/1211768589707757419" target="_blank" rel="noopener" class="property-link">
+                    <span data-en="Book Now" data-es="Reservar">Book Now</span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                </a>
+                <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M8 14V4"/><path d="M4 4c2 1 3 4 4 6"/><path d="M12 4c-2 1-3 4-4 6"/></svg> <span data-en="Garden terraces" data-es="Terrazas con jard&iacute;n">Garden terraces</span></div>
+            </div>
+        </div>
+
+        <!-- María Elvira (formerly Residencia Polanco) -->
+        <div class="property-row reverse fade-in-up">
+            <div class="property-image">
+                <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1209567715223945602/original/9903527d-5b25-4a1c-a3c4-276c529c106e.jpg" alt="María Elvira Residence" loading="lazy">
+            </div>
+            <div class="property-text">
+                <h3 class="property-name">Mar&iacute;a Elvira</h3>
+                <div class="property-type" data-en="Two-Bedroom Residence &middot; 6 guests" data-es="Residencia de dos habitaciones &middot; 6 hu&eacute;spedes">Two-Bedroom Residence &middot; 6 guests</div>
+                <div class="property-meta">
+                    <span class="property-rating">&#9733; 4.87</span>
+                    <span data-en="(31 reviews)" data-es="(31 rese&ntilde;as)">(31 reviews)</span>
+                </div>
+                <p class="property-desc" data-en="A private terrace, king and queen beds, and complimentary parking &mdash; rare in this neighborhood. Named after a grandmother whose home was always the one everyone wanted to visit." data-es="Terraza privada, cama king y queen y estacionamiento gratuito &mdash; una rareza en la zona. Nombrada en honor a una abuela cuya casa siempre era la que todos quer&iacute;an visitar.">A private terrace, king and queen beds, and complimentary parking &mdash; rare in this neighborhood. Named after a grandmother whose home was always the one everyone wanted to visit.</p>
+                <a href="https://es-l.airbnb.com/rooms/1209567715223945602" target="_blank" rel="noopener" class="property-link">
+                    <span data-en="Book Now" data-es="Reservar">Book Now</span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                </a>
+                <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M8 14V4"/><path d="M4 4c2 1 3 4 4 6"/><path d="M12 4c-2 1-3 4-4 6"/></svg> <span data-en="Green terrace" data-es="Terraza verde">Green terrace</span></div>
+            </div>
+        </div>
+
+        <!-- Isabel (formerly Residencia Luz) -->
+        <div class="property-row fade-in-up">
+            <div class="property-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/1d914f63-4174-4341-ab83-64272c39b1e4.jpeg" alt="Isabel Residence" loading="lazy">
+            </div>
+            <div class="property-text">
+                <h3 class="property-name">Isabel</h3>
+                <div class="property-type" data-en="Studio Residence &middot; 2 guests" data-es="Estudio &middot; 2 hu&eacute;spedes">Studio Residence &middot; 2 guests</div>
+                <div class="property-meta">
+                    <span class="property-rating">&#9733; 4.95</span>
+                    <span data-en="(44 reviews)" data-es="(44 rese&ntilde;as)">(44 reviews)</span>
+                </div>
+                <p class="property-desc" data-en="A bright retreat on the second floor of our classic Mexican casa. Bright, elegant, and perfectly kept. Fiber-optic WiFi and a dedicated workspace for those who travel with purpose. Named after a grandmother who believed that even the smallest details matter." data-es="Un refugio luminoso en el segundo piso de nuestra casa mexicana cl&aacute;sica. Luminoso, elegante e impecable. WiFi de fibra &oacute;ptica y espacio de trabajo dedicado para quienes viajan con prop&oacute;sito. Nombrada en honor a una abuela que cre&iacute;a que hasta los detalles m&aacute;s peque&ntilde;os importan.">A bright retreat on the second floor of our classic Mexican casa. Bright, elegant, and perfectly kept. Fiber-optic WiFi and a dedicated workspace for those who travel with purpose. Named after a grandmother who believed that even the smallest details matter.</p>
+                <a href="https://es-l.airbnb.com/rooms/1193042271718383527" target="_blank" rel="noopener" class="property-link">
+                    <span data-en="Book Now" data-es="Reservar">Book Now</span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                </a>
+                <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M8 14V4"/><path d="M4 4c2 1 3 4 4 6"/><path d="M12 4c-2 1-3 4-4 6"/></svg> <span data-en="Indoor plants" data-es="Plantas de interior">Indoor plants</span></div>
+            </div>
+        </div>
+
+        <!-- Martha (formerly Residencia Balcón) -->
+        <div class="property-row reverse fade-in-up">
+            <div class="property-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3ODI0MTM1OTMzNTYwMzMyNw%3D%3D/original/5aa0fd39-5d31-420a-adad-28851567227c.jpeg" alt="Martha Residence" loading="lazy">
+            </div>
+            <div class="property-text">
+                <h3 class="property-name">Martha</h3>
+                <div class="property-type" data-en="Studio with Balcony &middot; 2 guests" data-es="Estudio con balc&oacute;n &middot; 2 hu&eacute;spedes">Studio with Balcony &middot; 2 guests</div>
+                <div class="property-meta">
+                    <span class="property-rating">&#9733; 4.87</span>
+                    <span data-en="(71 reviews)" data-es="(71 rese&ntilde;as)">(71 reviews)</span>
+                </div>
+                <p class="property-desc" data-en="Perched on the second floor with views over the neighborhood. Our most reviewed residence. A balcony with a view, a quiet corner of the city, and everything you need to feel at home. Named after a grandmother who had the gift of making everyone feel welcome." data-es="En el segundo piso con vista al barrio. Nuestra residencia m&aacute;s rese&ntilde;ada. Un balc&oacute;n con vista, un rinc&oacute;n tranquilo de la ciudad, y todo lo que necesitas para sentirte en casa. Nombrada en honor a una abuela que ten&iacute;a el don de hacer que todos se sintieran bienvenidos.">Perched on the second floor with views over the neighborhood. Our most reviewed residence. A balcony with a view, a quiet corner of the city, and everything you need to feel at home. Named after a grandmother who had the gift of making everyone feel welcome.</p>
+                <a href="https://es-l.airbnb.com/rooms/1178241359335603327" target="_blank" rel="noopener" class="property-link">
+                    <span data-en="Book Now" data-es="Reservar">Book Now</span>
+                    <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                </a>
+                <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M8 14V4"/><path d="M4 4c2 1 3 4 4 6"/><path d="M12 4c-2 1-3 4-4 6"/></svg> <span data-en="Balcony garden" data-es="Jard&iacute;n en balc&oacute;n">Balcony garden</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── DETAILS MOSAIC ─── -->
+    <section class="details">
+        <div class="details-header fade-in-up">
+            <span class="label" data-en="The Details" data-es="Los Detalles">The Details</span>
+            <h2 class="section-title" data-en="Every corner, designed for you" data-es="Cada rinc&oacute;n, pensado para ti">Every corner, designed for you</h2>
+            <p style="font-size: 0.95rem; line-height: 2; color: var(--text-body); margin-top: 1rem;" data-en="Like our grandmothers' homes, every corner of Casa Caravana is alive with plants, natural light, and the kind of warmth that only living things bring." data-es="Como los hogares de nuestras abuelas, cada rinc&oacute;n de Casa Caravana est&aacute; vivo con plantas, luz natural y esa calidez que solo las cosas vivas traen.">Like our grandmothers' homes, every corner of Casa Caravana is alive with plants, natural light, and the kind of warmth that only living things bring.</p>
+        </div>
+        <div class="details-grid">
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1209567715223945602/original/a8a5cf92-8683-4867-b819-2c02bbbf49af.jpeg" alt="Hotel amenities" loading="lazy">
+                <div class="detail-overlay"><span data-en="Hotel amenities" data-es="Amenidades de hotel">Hotel amenities</span></div>
+            </div>
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/bfde448a-b9f7-4245-af52-2f7969dda32e.jpeg" alt="Full kitchen" loading="lazy">
+                <div class="detail-overlay"><span data-en="Full kitchen" data-es="Cocina completa">Full kitchen</span></div>
+            </div>
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/d4ae7ec0-50d7-4406-887e-8ce52ad32388.jpeg" alt="Hotel-quality linens" loading="lazy">
+                <div class="detail-overlay"><span data-en="Hotel-quality linens" data-es="S&aacute;banas hoteleras">Hotel-quality linens</span></div>
+            </div>
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/42c8ed9f-0f8b-4cdd-97db-df216940ce2a.jpeg" alt="Dedicated workspace" loading="lazy">
+                <div class="detail-overlay"><span data-en="Dedicated workspace" data-es="Espacio de trabajo">Dedicated workspace</span></div>
+            </div>
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/22063d0f-1a84-4cd9-ae9e-41ff602fe51c.jpeg" alt="Private terraces" loading="lazy">
+                <div class="detail-overlay"><span data-en="Private terraces" data-es="Terrazas privadas">Private terraces</span></div>
+            </div>
+            <div class="detail-item fade-in-up">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/7512fa42-0588-4a7b-ae6b-441d303010e5.jpeg" alt="Intimate dining" loading="lazy">
+                <div class="detail-overlay"><span data-en="Intimate dining" data-es="Comedor &iacute;ntimo">Intimate dining</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FULL-WIDTH IMAGE BREAK 2 ─── -->
+    <div class="image-break">
+        <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1209567715223945602/original/7154f249-17ac-4d16-998b-3045689df476.jpg" alt="Exterior balcony with tropical plants at Casa Caravana" loading="lazy">
+    </div>
+
+    <!-- ─── LOCATION ─── -->
+    <section class="location" id="barrio">
+        <div class="location-header fade-in-up">
+            <span class="label" data-en="The Location" data-es="La Ubicaci&oacute;n">The Location</span>
+            <h2 class="section-title" data-en="Steps from everything" data-es="A pasos de todo">Steps from everything</h2>
+        </div>
+        <div class="location-grid fade-in-up">
+            <div class="location-places">
+                <div class="location-place">
+                    <span>Polanco</span>
+                    <span class="location-time" data-en="5 min walk" data-es="5 min caminando">5 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span data-en="Museum of Anthropology" data-es="Museo de Antropolog&iacute;a">Museum of Anthropology</span>
+                    <span class="location-time" data-en="10 min walk" data-es="10 min caminando">10 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span data-en="Chapultepec Forest" data-es="Bosque de Chapultepec">Chapultepec Forest</span>
+                    <span class="location-time" data-en="12 min walk" data-es="12 min caminando">12 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span>Av. Reforma</span>
+                    <span class="location-time" data-en="8 min walk" data-es="8 min caminando">8 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span data-en="Restaurants &amp; caf&eacute;s" data-es="Restaurantes y caf&eacute;s">Restaurants &amp; caf&eacute;s</span>
+                    <span class="location-time" data-en="2 min walk" data-es="2 min caminando">2 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span>Metro Polanco L7</span>
+                    <span class="location-time" data-en="10 min walk" data-es="10 min caminando">10 min walk</span>
+                </div>
+                <div class="location-place">
+                    <span data-en="AICM Airport" data-es="Aeropuerto AICM">AICM Airport</span>
+                    <span class="location-time" data-en="30 min by car" data-es="30 min en auto">30 min by car</span>
+                </div>
+            </div>
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.8!2d-99.17763!3d19.42963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c6de9f98e7%3A0x0!2zMTnCsDI1JzQ2LjciTiA5OcKwMTAnMzkuNSJX!5e0!3m2!1sen!2smx!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <p class="location-note fade-in-up" data-en="A tree-lined, quiet street between Polanco and Anzures, with some of the city's finest galleries, restaurants, and museums just minutes away. The perfect blend of local life and access to everything." data-es="Una calle arbolada y tranquila entre Polanco y Anzures, con algunos de los mejores galer&iacute;as, restaurantes y museos de la ciudad a unos minutos de distancia. La combinaci&oacute;n perfecta de vida local y acceso a todo.">A tree-lined, quiet street between Polanco and Anzures, with some of the city's finest galleries, restaurants, and museums just minutes away. The perfect blend of local life and access to everything.</p>
+    </section>
+
+    <!-- ─── REVIEWS ─── -->
+    <section class="reviews">
+        <div class="reviews-header fade-in-up">
+            <span class="label" data-en="Our Guests" data-es="Nuestros Hu&eacute;spedes">Our Guests</span>
+            <div style="margin-bottom: 1rem;">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#C08B7A" stroke-width="1" stroke-linecap="round" style="opacity:0.35;"><path d="M8 14V4"/><path d="M4 4c2 1 3 4 4 6"/><path d="M12 4c-2 1-3 4-4 6"/></svg>
+            </div>
+            <h2 class="section-title" data-en="195 stories, one constant: care" data-es="195 historias, un mismo cuidado">195 stories, one constant: care</h2>
+        </div>
+        <div class="reviews-grid fade-in-up">
+            <div class="review-item">
+                <div class="review-quote-mark">&ldquo;</div>
+                <p class="review-text" data-en="The location is unbeatable and the apartment was spotless. Mariana is an exceptional host &mdash; you can feel the care in every detail." data-es="La ubicaci&oacute;n es inmejorable y el departamento impecable. Mariana es una anfitriona excepcional &mdash; se nota el cuidado en cada detalle.">The location is unbeatable and the apartment was spotless. Mariana is an exceptional host &mdash; you can feel the care in every detail.</p>
+                <div class="review-author">Andrea &mdash; Cecilia</div>
+            </div>
+            <div class="review-item">
+                <div class="review-quote-mark">&ldquo;</div>
+                <p class="review-text" data-en="Perfect for remote work. Excellent WiFi, quiet neighborhood, everything I needed. Stayed for a month and didn't want to leave." data-es="Perfecto para trabajar remoto. WiFi excelente, zona tranquila, todo lo que necesitaba. Me qued&eacute; un mes y no quer&iacute;a irme.">Perfect for remote work. Excellent WiFi, quiet neighborhood, everything I needed. Stayed for a month and didn't want to leave.</p>
+                <div class="review-author">Michael &mdash; Isabel</div>
+            </div>
+            <div class="review-item">
+                <div class="review-quote-mark">&ldquo;</div>
+                <p class="review-text" data-en="The three terraces are incredible. We had breakfast outside every morning. Best decision of our trip to Mexico." data-es="Las tres terrazas son incre&iacute;bles. Desayunamos cada ma&ntilde;ana afuera. La mejor decisi&oacute;n de nuestro viaje a M&eacute;xico.">The three terraces are incredible. We had breakfast outside every morning. Best decision of our trip to Mexico.</p>
+                <div class="review-author">Laura &mdash; Cecilia</div>
+            </div>
+        </div>
+        <div class="reviews-more fade-in-up">
+            <a href="https://es-l.airbnb.com/users/show/590498879" target="_blank" data-en="Read all 195+ reviews on Airbnb &rarr;" data-es="Leer las 195+ rese&ntilde;as en Airbnb &rarr;">Read all 195+ reviews on Airbnb &rarr;</a>
+        </div>
+        <div class="reviews-stats fade-in-up">
+            <span data-en="4.91 average &middot; 195+ reviews &middot; Superhost" data-es="4.91 promedio &middot; 195+ rese&ntilde;as &middot; Superhost">4.91 average &middot; 195+ reviews &middot; Superhost</span>
+        </div>
+    </section>
+
+    <!-- ─── NEIGHBORHOOD GUIDE ─── -->
+    <section class="neighborhood-guide">
+        <div class="neighborhood-guide-header fade-in-up">
+            <span class="label" data-en="The Neighborhood" data-es="Descubre la zona">The Neighborhood</span>
+            <h2 class="section-title" data-en="Your guide to Polanco &amp; beyond" data-es="Tu gu&iacute;a de Polanco y alrededores">Your guide to Polanco &amp; beyond</h2>
+        </div>
+        <div class="guide-grid fade-in-up">
+            <div class="guide-item">
+                <h4>Polanco</h4>
+                <p data-en="The city's most cosmopolitan neighborhood. Art galleries, designer boutiques, Michelin-starred restaurants, and the famous Avenida Presidente Masaryk await you just five minutes on foot from Casa Caravana." data-es="El barrio m&aacute;s cosmopolita de la ciudad. Galer&iacute;as de arte, boutiques de dise&ntilde;o, restaurantes con estrella Michelin y la famosa Avenida Presidente Masaryk te esperan a cinco minutos caminando desde Casa Caravana.">The city's most cosmopolitan neighborhood. Art galleries, designer boutiques, Michelin-starred restaurants, and the famous Avenida Presidente Masaryk await you just five minutes on foot from Casa Caravana.</p>
+            </div>
+            <div class="guide-item">
+                <h4 data-en="Museum of Anthropology" data-es="Museo de Antropolog&iacute;a">Museum of Anthropology</h4>
+                <p data-en="One of the most important museums in the world, a ten-minute walk away. It houses the Sun Stone and thousands of pieces that tell the story of Mesoamerican civilizations." data-es="Uno de los museos m&aacute;s importantes del mundo, a diez minutos a pie. Alberga la Piedra del Sol y miles de piezas que cuentan la historia de las civilizaciones mesoamericanas.">One of the most important museums in the world, a ten-minute walk away. It houses the Sun Stone and thousands of pieces that tell the story of Mesoamerican civilizations.</p>
+            </div>
+            <div class="guide-item">
+                <h4 data-en="Chapultepec Forest" data-es="Bosque de Chapultepec">Chapultepec Forest</h4>
+                <p data-en="The city's green lung. Over 680 hectares for running, cycling, or simply strolling among centuries-old ahuehuete trees. Chapultepec Castle offers unforgettable panoramic views." data-es="El pulm&oacute;n verde de la ciudad. M&aacute;s de 680 hect&aacute;reas para correr, andar en bicicleta o simplemente pasear entre ahuehuetes centenarios. El Castillo de Chapultepec ofrece vistas panor&aacute;micas inolvidables.">The city's green lung. Over 680 hectares for running, cycling, or simply strolling among centuries-old ahuehuete trees. Chapultepec Castle offers unforgettable panoramic views.</p>
+            </div>
+            <div class="guide-item">
+                <h4 data-en="Avenida Reforma" data-es="Avenida Reforma">Avenida Reforma</h4>
+                <p data-en="Mexico's most iconic avenue. It connects the city's main points of interest and every Sunday transforms into an open bike lane for thousands of cyclists." data-es="La avenida m&aacute;s emblem&aacute;tica de M&eacute;xico. Conecta los principales puntos de inter&eacute;s y cada domingo se convierte en ciclov&iacute;a abierta para miles de ciclistas.">Mexico's most iconic avenue. It connects the city's main points of interest and every Sunday transforms into an open bike lane for thousands of cyclists.</p>
+            </div>
+            <div class="guide-item">
+                <h4 data-en="Local gastronomy" data-es="Gastronom&iacute;a local">Local gastronomy</h4>
+                <p data-en="From tacos de canasta on the corner to some of the best restaurants in Latin America. Pujol, Quintonil, and dozens of options for every taste, all minutes from your door." data-es="Desde tacos de canasta en la esquina hasta los mejores restaurantes de Latinoam&eacute;rica. Pujol, Quintonil y decenas de opciones para todos los gustos a minutos de tu puerta.">From tacos de canasta on the corner to some of the best restaurants in Latin America. Pujol, Quintonil, and dozens of options for every taste, all minutes from your door.</p>
+            </div>
+            <div class="guide-item">
+                <h4 data-en="Nightlife &amp; culture" data-es="Vida nocturna y cultura">Nightlife &amp; culture</h4>
+                <p data-en="Mezcal bars in Polanco, live jazz in Condesa, theater on Reforma. Mexico City never sleeps &mdash; and you're at the center of it all." data-es="Bares de mezcal en Polanco, jazz en vivo en la Condesa, teatro en Reforma. La Ciudad de M&eacute;xico no duerme &mdash; y t&uacute; est&aacute;s en el centro de todo.">Mezcal bars in Polanco, live jazz in Condesa, theater on Reforma. Mexico City never sleeps &mdash; and you're at the center of it all.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── EXPERIENCES / SERVICES ─── -->
+    <section class="experiences">
+        <div class="experiences-header fade-in-up">
+            <span class="label" data-en="Services" data-es="Servicios">Services</span>
+            <h2 class="section-title" data-en="Beyond the stay" data-es="M&aacute;s all&aacute; del alojamiento">Beyond the stay</h2>
+        </div>
+        <div class="experiences-grid fade-in-up">
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                </div>
+                <h4 data-en="Local recommendations" data-es="Recomendaciones locales">Local recommendations</h4>
+                <p data-en="Restaurants, markets, massages, and curated experiences selected by us, just for you." data-es="Restaurantes, mercados, masajes y experiencias seleccionadas por nosotros para ti.">Restaurants, markets, massages, and curated experiences selected by us, just for you.</p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-1"/><polygon points="12 15 17 21 7 21 12 15"/></svg>
+                </div>
+                <h4 data-en="Private transportation" data-es="Transporte privado">Private transportation</h4>
+                <p data-en="We arrange your transfer from the airport or anywhere in the city." data-es="Coordinamos tu traslado desde el aeropuerto o cualquier punto de la ciudad.">We arrange your transfer from the airport or anywhere in the city.</p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h4 data-en="Remote work" data-es="Trabajo remoto">Remote work</h4>
+                <p data-en="Fiber-optic WiFi, dedicated workspace, and a quiet atmosphere in every residence." data-es="WiFi de fibra &oacute;ptica, zona de trabajo dedicada y ambiente silencioso en cada residencia.">Fiber-optic WiFi, dedicated workspace, and a quiet atmosphere in every residence.</p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                </div>
+                <h4>Baby Kit</h4>
+                <p data-en="Crib, baby bath, and high chair available at no extra cost. Just let us know in advance." data-es="Cuna, ba&ntilde;era y silla alta disponibles sin costo. Solo av&iacute;sanos con anticipaci&oacute;n.">Crib, baby bath, and high chair available at no extra cost. Just let us know in advance.</p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                </div>
+                <h4 data-en="City guides" data-es="Gu&iacute;as por la ciudad">City guides</h4>
+                <p data-en="We connect you with local guides for tours of museums, markets, street art, and more." data-es="Conectamos con gu&iacute;as locales para recorridos por museos, mercados, arte urbano y m&aacute;s.">We connect you with local guides for tours of museums, markets, street art, and more.</p>
+            </div>
+            <div class="experience-card">
+                <div class="experience-icon">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <h4 data-en="Flexible check-in" data-es="Check-in flexible">Flexible check-in</h4>
+                <p data-en="Self check-in 24 hours a day with electronic smart locks. No waiting, no hassle." data-es="Llegada aut&oacute;noma las 24 horas con cerraduras electr&oacute;nicas. Sin esperas, sin complicaciones.">Self check-in 24 hours a day with electronic smart locks. No waiting, no hassle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section class="faq">
+        <div class="faq-header fade-in-up">
+            <span class="label" data-en="Frequently Asked Questions" data-es="Preguntas frecuentes">Frequently Asked Questions</span>
+            <h2 class="section-title" data-en="Everything you need to know" data-es="Todo lo que necesitas saber">Everything you need to know</h2>
+        </div>
+        <div class="faq-list fade-in-up">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Where is Casa Caravana located?" data-es="&iquest;D&oacute;nde se ubica Casa Caravana?">Where is Casa Caravana located?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="We are at Descartes 47, steps from Polanco, the Museum of Anthropology, and Chapultepec Forest in Mexico City." data-es="Estamos en Descartes 47, a pasos del barrio de Polanco, el Museo de Antropolog&iacute;a y el Bosque de Chapultepec en Ciudad de M&eacute;xico.">We are at Descartes 47, steps from Polanco, the Museum of Anthropology, and Chapultepec Forest in Mexico City.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="How many residences does Casa Caravana have?" data-es="&iquest;Cu&aacute;ntas residencias tiene Casa Caravana?">How many residences does Casa Caravana have?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="We have four residences: Cecilia (3 bedrooms, 8 guests), Mar&iacute;a Elvira (2 bedrooms, 6 guests), Isabel (studio, 2 guests), and Martha (studio with balcony, 2 guests)." data-es="Contamos con cuatro residencias: Cecilia (3 habitaciones, 8 hu&eacute;spedes), Mar&iacute;a Elvira (2 habitaciones, 6 hu&eacute;spedes), Isabel (estudio, 2 hu&eacute;spedes) y Martha (estudio con balc&oacute;n, 2 hu&eacute;spedes).">We have four residences: Cecilia (3 bedrooms, 8 guests), Mar&iacute;a Elvira (2 bedrooms, 6 guests), Isabel (studio, 2 guests), and Martha (studio with balcony, 2 guests).</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Do you have parking?" data-es="&iquest;Tienen estacionamiento?">Do you have parking?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Yes, we offer free on-site parking &mdash; a rare find in the Polanco area." data-es="S&iacute;, ofrecemos estacionamiento gratuito en las instalaciones, algo poco com&uacute;n en la zona de Polanco.">Yes, we offer free on-site parking &mdash; a rare find in the Polanco area.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="How does check-in work?" data-es="&iquest;C&oacute;mo es el check-in?">How does check-in work?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="We offer self check-in with high-security electronic locks. We send detailed instructions before your arrival so the process is seamless." data-es="Ofrecemos check-in aut&oacute;nomo con cerraduras electr&oacute;nicas de m&aacute;xima seguridad. Te enviamos instrucciones detalladas antes de tu llegada para que el proceso sea sencillo.">We offer self check-in with high-security electronic locks. We send detailed instructions before your arrival so the process is seamless.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Are the apartments family-friendly for babies?" data-es="&iquest;Son aptas para familias con beb&eacute;s?">Are the apartments family-friendly for babies?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Yes, we have a Baby Kit that includes a crib, baby bath, and high chair. Just let us know in advance so we can have it ready." data-es="S&iacute;, contamos con un Baby Kit que incluye cuna, ba&ntilde;era y silla alta. Solo av&iacute;sanos con anticipaci&oacute;n para tenerlo listo.">Yes, we have a Baby Kit that includes a crib, baby bath, and high chair. Just let us know in advance so we can have it ready.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Do you have WiFi?" data-es="&iquest;Tienen WiFi?">Do you have WiFi?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Yes, all residences have high-speed fiber-optic internet, ideal for remote work or streaming." data-es="S&iacute;, todas las residencias cuentan con internet de fibra &oacute;ptica de alta velocidad, ideal para trabajo remoto o streaming.">Yes, all residences have high-speed fiber-optic internet, ideal for remote work or streaming.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="What is near Casa Caravana?" data-es="&iquest;Qu&eacute; hay cerca de Casa Caravana?">What is near Casa Caravana?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Polanco is a 5-minute walk, Museum of Anthropology 10 minutes, Chapultepec Forest 12 minutes, restaurants and caf&eacute;s 2 minutes. There's a convenience store on the corner where you can easily pick up a local SIM card." data-es="Polanco a 5 minutos caminando, Museo de Antropolog&iacute;a a 10 minutos, Bosque de Chapultepec a 12 minutos, restaurantes y caf&eacute;s a 2 minutos. En la esquina hay una tienda donde puedes comprar f&aacute;cilmente una tarjeta SIM local.">Polanco is a 5-minute walk, Museum of Anthropology 10 minutes, Chapultepec Forest 12 minutes, restaurants and caf&eacute;s 2 minutes. There's a convenience store on the corner where you can easily pick up a local SIM card.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Do you offer additional services?" data-es="&iquest;Ofrecen servicios adicionales?">Do you offer additional services?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Yes, we can arrange in-home massages, manicures, grocery delivery, private transportation, and city guides. We also provide personalized local recommendations for restaurants, markets, and experiences." data-es="S&iacute;, podemos coordinar masajes a domicilio, manicura, mercado a domicilio, transporte privado y gu&iacute;as por la ciudad. Tambi&eacute;n proporcionamos recomendaciones locales personalizadas de restaurantes, mercados y experiencias.">Yes, we can arrange in-home massages, manicures, grocery delivery, private transportation, and city guides. We also provide personalized local recommendations for restaurants, markets, and experiences.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="What are the check-in and check-out times?" data-es="&iquest;Cu&aacute;les son los horarios de check-in y check-out?">What are the check-in and check-out times?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Check-in is from 3:00 PM and check-out is by 11:00 AM. We offer self check-in with electronic locks, so you can arrive on your own schedule." data-es="El check-in es a partir de las 3:00 PM y el check-out es antes de las 11:00 AM. Ofrecemos llegada aut&oacute;noma con cerraduras electr&oacute;nicas, as&iacute; que puedes llegar a tu propio ritmo.">Check-in is from 3:00 PM and check-out is by 11:00 AM. We offer self check-in with electronic locks, so you can arrive on your own schedule.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="What is the cancellation policy?" data-es="&iquest;Cu&aacute;l es la pol&iacute;tica de cancelaci&oacute;n?">What is the cancellation policy?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Cancellation policies vary by residence and dates. Please check the specific listing on Airbnb for current terms, or contact us directly for flexibility on longer stays." data-es="Las pol&iacute;ticas de cancelaci&oacute;n var&iacute;an seg&uacute;n la residencia y las fechas. Consulta el listado espec&iacute;fico en Airbnb para los t&eacute;rminos actuales, o cont&aacute;ctanos directamente para flexibilidad en estancias largas.">Cancellation policies vary by residence and dates. Please check the specific listing on Airbnb for current terms, or contact us directly for flexibility on longer stays.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span data-en="Do the apartments have air conditioning?" data-es="&iquest;Los departamentos tienen aire acondicionado?">Do the apartments have air conditioning?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-en="Yes, all four residences have split-system air conditioning for year-round comfort." data-es="S&iacute;, las cuatro residencias cuentan con aire acondicionado tipo mini split para confort durante todo el a&ntilde;o.">Yes, all four residences have split-system air conditioning for year-round comfort.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section class="contact" id="contacto">
+        <div class="contact-header fade-in-up">
+            <span class="label" data-en="Contact" data-es="Contacto">Contact</span>
+            <h2 class="section-title" data-en="Let's plan your stay" data-es="Planeemos tu estancia">Let's plan your stay</h2>
+        </div>
+        <div style="text-align: center; margin-bottom: 3rem; opacity: 0.12;">
+            <svg width="140" height="20" viewBox="0 0 120 24" fill="none" stroke="#C08B7A" stroke-width="0.8" stroke-linecap="round"><path d="M0 12 Q15 4, 30 12 Q45 20, 60 12 Q75 4, 90 12 Q105 20, 120 12"/><path d="M15 8c-2-3-1-5 1-4s1 3 0 4"/><path d="M45 16c-2 3-1 5 1 4s1-3 0-4"/><path d="M75 8c-2-3-1-5 1-4s1 3 0 4"/><path d="M105 16c-2 3-1 5 1 4s1-3 0-4"/></svg>
+        </div>
+        <div class="contact-grid fade-in-up">
+            <div class="contact-info">
+                <h4 data-en="Information" data-es="Informaci&oacute;n">Information</h4>
+                <div class="contact-detail">
+                    <div class="contact-detail-label" data-en="Address" data-es="Direcci&oacute;n">Address</div>
+                    <p data-en="Descartes 47, Mexico City" data-es="Descartes 47, Ciudad de M&eacute;xico">Descartes 47, Mexico City</p>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-label">Email</div>
+                    <p><a href="mailto:hola@casacaravana.com">hola@casacaravana.com</a></p>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-label">WhatsApp</div>
+                    <p><a href="https://wa.me/message" data-en="Contact us on WhatsApp" data-es="Cont&aacute;ctanos por WhatsApp">Contact us on WhatsApp</a></p>
+                </div>
+                <div class="contact-links">
+                    <h4 data-en="Reserve your stay" data-es="Reserva tu estancia">Reserve your stay</h4>
+                    <a href="https://es-l.airbnb.com/rooms/1211768589707757419" target="_blank" rel="noopener" class="contact-link-item">
+                        <span data-en="Cecilia &mdash; 3 bedrooms, 8 guests" data-es="Cecilia &mdash; 3 habitaciones, 8 hu&eacute;spedes">Cecilia &mdash; 3 bedrooms, 8 guests</span>
+                        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                    </a>
+                    <a href="https://es-l.airbnb.com/rooms/1209567715223945602" target="_blank" rel="noopener" class="contact-link-item">
+                        <span data-en="Mar&iacute;a Elvira &mdash; 2 bedrooms, 6 guests" data-es="Mar&iacute;a Elvira &mdash; 2 habitaciones, 6 hu&eacute;spedes">Mar&iacute;a Elvira &mdash; 2 bedrooms, 6 guests</span>
+                        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                    </a>
+                    <a href="https://es-l.airbnb.com/rooms/1193042271718383527" target="_blank" rel="noopener" class="contact-link-item">
+                        <span data-en="Isabel &mdash; studio, 2 guests" data-es="Isabel &mdash; estudio, 2 hu&eacute;spedes">Isabel &mdash; studio, 2 guests</span>
+                        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                    </a>
+                    <a href="https://es-l.airbnb.com/rooms/1178241359335603327" target="_blank" rel="noopener" class="contact-link-item">
+                        <span data-en="Martha &mdash; studio with balcony, 2 guests" data-es="Martha &mdash; estudio con balc&oacute;n, 2 hu&eacute;spedes">Martha &mdash; studio with balcony, 2 guests</span>
+                        <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault();">
+                <input type="text" id="formName" placeholder="Full name" required data-en-placeholder="Full name" data-es-placeholder="Nombre completo" aria-label="Full name">
+                <input type="email" id="formEmail" placeholder="Email" required data-en-placeholder="Email" data-es-placeholder="Email" aria-label="Email">
+                <input type="text" id="formDates" placeholder="Dates of interest" data-en-placeholder="Dates of interest" data-es-placeholder="Fechas de inter&eacute;s" aria-label="Dates of interest">
+                <input type="text" id="formGuests" placeholder="Number of guests" data-en-placeholder="Number of guests" data-es-placeholder="N&uacute;mero de hu&eacute;spedes" aria-label="Number of guests">
+                <textarea id="formMessage" placeholder="Tell us about your trip..." rows="4" data-en-placeholder="Tell us about your trip..." data-es-placeholder="Cu&eacute;ntanos sobre tu viaje..." aria-label="Tell us about your trip"></textarea>
+                <button type="submit" data-en="Send inquiry" data-es="Enviar mensaje">Send inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="botanical-stamp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C08B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4-3-8-8-8-13a8 8 0 0116 0c0 5-4 10-8 13z"/><path d="M12 22V9"/><path d="M8 13c2-1 3-3 4-5"/><path d="M16 13c-2-1-3-3-4-5"/><path d="M7 9c2 0 3.5 1 5 3"/><path d="M17 9c-2 0-3.5 1-5 3"/></svg>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-name">Casa Caravana Boutique Residences</div>
+                <div class="footer-brand-tagline" data-en="Design residences in the heart of Polanco" data-es="Residencias de dise&ntilde;o en el coraz&oacute;n de Polanco">Design residences in the heart of Polanco</div>
+            </div>
+            <div class="footer-nav">
+                <a href="#espacios" data-en="Our Spaces" data-es="Espacios">Our Spaces</a>
+                <a href="#barrio" data-en="The Neighborhood" data-es="El Barrio">The Neighborhood</a>
+                <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+            <div class="footer-partner">
+                <p data-en="A sister project of" data-es="Un proyecto hermano de">A sister project of</p>
+                <a href="https://www.lacaravanacreativa.com/" target="_blank" rel="noopener">La Caravana Creativa</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Casa Caravana Boutique Residences &middot; Descartes 47, Mexico City
+        </div>
+    </footer>
+
+    <!-- ─── PERSISTENT BOOKING BAR ─── -->
+    <div class="booking-bar">
+        <p data-en="4 residences available in Polanco" data-es="4 residencias disponibles en Polanco">4 residences available in Polanco</p>
+        <a href="#contacto" data-en="Book Now" data-es="Reservar">Book Now</a>
+    </div>
+
+    <!-- ─── SCRIPTS ─── -->
+    <script>
+        // Navigation scroll effect
+        var nav = document.getElementById('nav');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 80) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.remove('open');
+        }
+
+        // Intersection Observer for fade-in animations
+        var observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.parentElement;
+                var answer = item.querySelector('.faq-answer');
+                var isOpen = item.classList.contains('open');
+
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(function(other) {
+                    if (other !== item) {
+                        other.classList.remove('open');
+                        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                        other.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current
+                if (isOpen) {
+                    item.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    answer.style.maxHeight = null;
+                } else {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // ─── LANGUAGE SWITCHER ───
+        function setLang(lang) {
+            // Update all elements with data-en / data-es attributes
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                if (el.getAttribute('data-' + lang)) {
+                    el.innerHTML = el.getAttribute('data-' + lang);
+                }
+            });
+
+            // Update placeholders for form inputs
+            document.querySelectorAll('[data-' + lang + '-placeholder]').forEach(function(el) {
+                el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
+            });
+
+            // Update active state on language links
+            var enLinks = [document.getElementById('langEN'), document.getElementById('langENMobile')];
+            var esLinks = [document.getElementById('langES'), document.getElementById('langESMobile')];
+
+            enLinks.forEach(function(link) {
+                if (link) {
+                    if (lang === 'en') { link.classList.add('active'); } else { link.classList.remove('active'); }
+                }
+            });
+            esLinks.forEach(function(link) {
+                if (link) {
+                    if (lang === 'es') { link.classList.add('active'); } else { link.classList.remove('active'); }
+                }
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
+            // Save preference
+            localStorage.setItem('casacaravana-lang', lang);
+        }
+
+        // Check for saved language preference or URL parameter
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+            var urlLang = params.get('lang');
+            var savedLang = localStorage.getItem('casacaravana-lang');
+            var lang = urlLang || savedLang || 'en';
+            if (lang === 'es') {
+                setLang('es');
+            }
+        })();
+    </script>
+
+</body>
+</html>
