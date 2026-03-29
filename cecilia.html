@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecilia — Casa Caravana Boutique Residences</title>
+    <meta name="description" content="Cecilia at Casa Caravana — Three-Bedroom Residence · 8 guests. Boutique residence in Anzures, steps from Polanco, Mexico City.">
+    <link rel="icon" type="image/jpeg" href="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FDFBF9;
+            --bg-alt: #F5F0EC;
+            --accent: #C08B7A;
+            --accent-text: #8B6355;
+            --accent-hover: #A8756A;
+            --text: #2B2B2B;
+            --text-body: #5C5650;
+            --text-light: #9A948D;
+            --divider: #E8E2DB;
+            --gold: #C4A265;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            color: var(--text-body);
+            background: var(--bg);
+            line-height: 2.0;
+            font-size: 1rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.15;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .label {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── NAVIGATION ─── */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(253, 251, 249, 0.97);
+            box-shadow: 0 1px 0 var(--divider);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .nav-logo-img {
+            height: 32px;
+            width: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .nav-logo-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.4);
+            transition: background 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-divider {
+            background: var(--divider);
+        }
+
+        .nav-logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .nav-logo-text {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #fff;
+            transition: color 0.4s ease;
+        }
+
+        .nav-logo-subtitle {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-text {
+            color: var(--text);
+        }
+
+        .nav.scrolled .nav-logo-subtitle {
+            color: var(--text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--text-body);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav.scrolled .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links .btn-reservar {
+            padding: 0.55rem 1.5rem;
+            border: 1px solid var(--accent-text);
+            color: var(--accent-text);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links .btn-reservar:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .lang-switcher {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .lang-switcher {
+            color: var(--text-body);
+        }
+
+        .lang-switcher a {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lang-switcher a:hover {
+            color: var(--accent);
+        }
+
+        .lang-switcher a.active {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 1.5px;
+            background: #fff;
+            transition: background 0.4s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        .nav.scrolled .hamburger span {
+            background: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        /* ─── HERO ─── */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.30), transparent);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 6rem;
+            left: 3rem;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: scrollPulse 2s ease infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 16px;
+            height: 16px;
+            stroke: rgba(255,255,255,0.5);
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.5; transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ─── INTRO ─── */
+
+        .intro {
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .intro-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            line-height: 2.1;
+            color: var(--text-body);
+        }
+
+        .thin-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--divider);
+            margin: 4rem auto 0;
+        }
+
+        /* ─── OUR STORY ─── */
+
+        .our-story {
+            padding: 6rem 2rem 10rem;
+            text-align: center;
+        }
+
+        .our-story-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .our-story p {
+            font-size: 0.98rem;
+            line-height: 2.1;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
+        }
+
+        .our-story p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .grandmothers-line {
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+
+        .grandmothers-names {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .grandmothers-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin: 1rem auto;
+        }
+
+        .grandmothers-caption {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── FULL WIDTH IMAGE BREAK ─── */
+
+        .image-break {
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        /* ─── PROPERTIES ─── */
+
+        .properties {
+            padding: 10rem 2rem;
+        }
+
+        .properties-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 6rem;
+        }
+
+        .property-row {
+            display: flex;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 4rem;
+            margin-bottom: 8rem;
+        }
+
+        .property-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .property-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .property-image {
+            flex: 0 0 58%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            transition: transform 0.6s ease;
+        }
+
+        .property-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .property-text {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .property-name {
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            margin-bottom: 0.3rem;
+        }
+
+        .property-type {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--accent-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .property-meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .property-rating {
+            color: var(--gold);
+        }
+
+        .property-specs {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .property-desc {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .property-link {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .property-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .property-link svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .property-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* ─── DETAILS MOSAIC ─── */
+
+        .details {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .details-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-item {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .detail-item:nth-child(2) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item:nth-child(5) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item img {
+            transition: transform 0.6s ease;
+        }
+
+        .detail-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .detail-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(43, 43, 43, 0);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            transition: background 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay {
+            background: rgba(43, 43, 43, 0.3);
+        }
+
+        .detail-overlay span {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── LOCATION ─── */
+
+        .location {
+            padding: 10rem 2rem;
+        }
+
+        .location-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .location-places {
+            padding-top: 1rem;
+        }
+
+        .location-place {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--divider);
+            font-size: 0.92rem;
+        }
+
+        .location-place:first-child {
+            padding-top: 0;
+        }
+
+        .location-time {
+            color: var(--accent-text);
+            font-size: 0.82rem;
+        }
+
+        .location-map {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--bg-alt);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-note {
+            max-width: 700px;
+            margin: 4rem auto 0;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── REVIEWS ─── */
+
+        .reviews {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .reviews-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review-item {
+            padding: 2rem 0;
+        }
+
+        .review-quote-mark {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .reviews-stats {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .reviews-stats span {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .reviews-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .reviews-more a {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--accent-text);
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .reviews-more a:hover {
+            color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        /* ─── CONTACT ─── */
+
+        .contact {
+            padding: 10rem 2rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail-label {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p {
+            font-size: 0.92rem;
+        }
+
+        .contact-detail a {
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent-hover);
+        }
+
+        .contact-links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .contact-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            font-size: 0.88rem;
+            color: var(--text-body);
+            border-bottom: 1px solid var(--divider);
+            transition: color 0.3s ease;
+        }
+
+        .contact-link-item:hover {
+            color: var(--accent);
+        }
+
+        .contact-link-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 1px solid var(--divider);
+            background: transparent;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            align-self: flex-start;
+            padding: 0.9rem 2.5rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ─── FOOTER ─── */
+
+        .footer {
+            background: var(--bg-alt);
+            padding: 5rem 3rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-brand-name {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            justify-self: center;
+        }
+
+        .footer-nav a {
+            font-size: 0.82rem;
+            color: var(--text-body);
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent);
+        }
+
+        .footer-partner {
+            justify-self: end;
+            text-align: right;
+        }
+
+        .footer-partner p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-partner a {
+            font-size: 0.82rem;
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .footer-partner a:hover {
+            color: var(--accent-hover);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* ─── PERSISTENT BOOKING BAR ─── */
+
+        .booking-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 900;
+            height: 50px;
+            background: rgba(253, 251, 249, 0.97);
+            border-top: 1px solid var(--divider);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+        }
+
+        .booking-bar p {
+            font-size: 0.82rem;
+            color: var(--text-body);
+        }
+
+        .booking-bar a {
+            padding: 0.45rem 1.8rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .booking-bar a:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ─── RESPONSIVE ─── */
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                bottom: 5rem;
+                left: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 10vw, 3.5rem);
+            }
+
+            .intro {
+                padding: 6rem 1.5rem;
+            }
+
+            .our-story {
+                padding: 3rem 1.5rem 6rem;
+            }
+
+            .properties {
+                padding: 6rem 1.5rem;
+            }
+
+            .properties-header {
+                margin-bottom: 4rem;
+            }
+
+            .property-row,
+            .property-row.reverse {
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 5rem;
+            }
+
+            .property-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .property-text {
+                padding: 0 0.5rem;
+            }
+
+            .details {
+                padding: 6rem 1.5rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .location {
+                padding: 6rem 1.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .location-map {
+                aspect-ratio: 16 / 10;
+            }
+
+            .reviews {
+                padding: 6rem 1.5rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact {
+                padding: 6rem 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .footer {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-nav {
+                justify-self: start;
+            }
+
+            .footer-partner {
+                justify-self: start;
+                text-align: left;
+            }
+
+            .booking-bar {
+                display: none;
+            }
+
+            .image-break {
+                height: 50vh;
+            }
+
+            .section-title {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            body {
+                padding-bottom: 54px;
+            }
+
+            .booking-bar-mobile {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 790;
+                height: 54px;
+                background: var(--bg);
+                border-top: 1px solid var(--divider);
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0 1.5rem;
+            }
+            .booking-bar-mobile a {
+                flex: 1;
+                text-align: center;
+                padding: 0.6rem;
+                font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+                font-size: 0.65rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .booking-bar-mobile .bm-book {
+                background: var(--accent);
+                color: #fff;
+            }
+            .booking-bar-mobile .bm-whatsapp {
+                background: #25D366;
+                color: #fff;
+            }
+        }
+
+        /* Body padding for booking bar on desktop */
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 50px;
+            }
+            .booking-bar-mobile { display: none; }
+        }
+        /* ─── NEIGHBORHOOD GUIDE ─── */
+
+        .neighborhood-guide {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .neighborhood-guide-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .guide-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .guide-item p {
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── EXPERIENCES / SERVICES ─── */
+
+        .experiences {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .experiences-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .experience-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1.5rem;
+            color: var(--accent);
+        }
+
+        .experience-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--accent);
+            fill: none;
+        }
+
+        .experience-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card p {
+            font-size: 0.92rem;
+            line-height: 1.9;
+        }
+
+        /* ─── FAQ ACCORDION ─── */
+
+        .faq {
+            padding: 10rem 2rem;
+            background: var(--bg);
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            font-weight: 200;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-body);
+        }
+
+        @media (max-width: 768px) {
+            .neighborhood-guide {
+                padding: 6rem 1.5rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .experiences {
+                padding: 6rem 1.5rem;
+            }
+
+            .experiences-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq {
+                padding: 6rem 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ─── STATS BAR ─── */
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── BOTANICAL ELEMENTS ─── */
+
+        .botanical-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto;
+            max-width: 200px;
+        }
+
+        .botanical-divider svg {
+            width: 24px;
+            height: 24px;
+            opacity: 0.35;
+        }
+
+        .botanical-divider .line {
+            flex: 1;
+            height: 1px;
+            background: var(--divider);
+        }
+
+        .section-botanical {
+            position: absolute;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .botanical-accent {
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 0.4;
+            margin: 0 0.3rem;
+        }
+
+        .botanical-stamp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--divider);
+            border-radius: 50%;
+            padding: 16px;
+            opacity: 0.5;
+        }
+
+        .botanical-stamp svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .property-botanical {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .intro-inner .botanical-corner {
+            display: block;
+            margin: 2rem auto 0;
+            opacity: 0.25;
+        }
+
+        /* Plants badge for property cards */
+        .plants-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #6B8F6B;
+            margin-top: 1rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba(107, 143, 107, 0.25);
+            border-radius: 2px;
+        }
+
+        .plants-badge svg {
+            width: 14px;
+            height: 14px;
+            stroke: #6B8F6B;
+            fill: none;
+        }
+        /* ─── WHATSAPP FLOATING BUTTON (mobile only) ─── */
+        .whatsapp-float {
+            display: none;
+            position: fixed;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            z-index: 800;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+        @media (max-width: 768px) {
+            .whatsapp-float { display: flex; }
+        }
+    
+        /* ─── SUBPAGE STYLES ─── */
+        .sub-hero {
+            height: 70vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .sub-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .sub-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+        .sub-hero-content {
+            position: absolute;
+            bottom: 8%;
+            left: 5%;
+            color: white;
+            z-index: 2;
+        }
+        .sub-hero-content h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 0.5rem;
+        }
+        .sub-hero-content p {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+        .sub-hero-back {
+            position: absolute;
+            top: 5rem;
+            left: 2rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 3;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .sub-hero-back:hover { opacity: 1; }
+
+        .sub-section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: opacity 0.3s;
+            cursor: pointer;
+        }
+        .gallery-grid img:hover { opacity: 0.88; }
+        .gallery-grid .tall { grid-row: span 2; height: 100%; }
+        .gallery-grid .wide { grid-column: span 2; }
+
+        .sub-desc {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sub-desc h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .sub-desc .rating-line {
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .sub-desc .floor-line {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .sub-desc p {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-body);
+        }
+
+        .amenities-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 3rem;
+        }
+        .amenity-tag {
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--divider);
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .sub-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .sub-cta a {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .sub-cta a:hover { background: var(--accent-hover); }
+
+        .others-section {
+            background: var(--bg-alt);
+            padding: 5rem 5%;
+        }
+        .others-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .others-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .other-card {
+            text-decoration: none;
+            color: var(--text);
+            transition: transform 0.3s;
+        }
+        .other-card:hover { transform: translateY(-4px); }
+        .other-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .other-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+        }
+        .other-card p {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid .wide { grid-column: span 1; }
+            .gallery-grid .tall { grid-row: span 1; height: 250px; }
+            .others-grid { grid-template-columns: 1fr; }
+            .sub-hero { height: 50vh; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="nav-logo">
+            <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Casa Caravana" class="nav-logo-img" style="height:32px; object-fit:contain;">
+            <span class="nav-logo-divider" style="width:1px; height:24px; background:var(--divider); margin:0 0.6rem;"></span>
+            <span class="nav-logo-text" style="font-family:'Playfair Display',Georgia,serif; font-size:1.1rem; color:var(--text);">Casa Caravana</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#espacios">Our Spaces</a></li>
+            <li><a href="index.html#barrio">The Neighborhood</a></li>
+            <li><a href="index.html#contacto">Contact</a></li>
+            <li><a href="https://es-l.airbnb.com/rooms/1211768589707757419" target="_blank" rel="noopener" class="btn-reservar">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="sub-hero">
+        <a href="index.html#espacios" class="sub-hero-back">&larr; All Residences</a>
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg" alt="Cecilia Residence">
+        <div class="sub-hero-overlay"></div>
+        <div class="sub-hero-content">
+            <h1>Cecilia</h1>
+            <p>Three-Bedroom Residence &middot; 8 guests</p>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="sub-section">
+        <div class="sub-desc">
+            <h2>Cecilia</h2>
+            <div class="rating-line">&#9733; 4.96 &middot; 49 reviews</div>
+            <div class="floor-line">Ground floor &mdash; no stairs needed</div>
+            <p>Named after a grandmother who always set the biggest table, Cecilia is designed for gathering. Three private garden terraces &mdash; one for morning coffee, one for afternoon reading, one for evening mezcal. A fully equipped kitchen, hotel-quality linens on every bed, and ground-floor access.</p>
+
+            <div class="amenities-grid">
+                <span class="amenity-tag">3 Bedrooms</span>
+                <span class="amenity-tag">King + Queen + 2 Singles</span>
+                <span class="amenity-tag">2 Bathrooms</span>
+                <span class="amenity-tag">3 Garden Terraces</span>
+                <span class="amenity-tag">Full Kitchen</span>
+                <span class="amenity-tag">Fiber WiFi</span>
+                <span class="amenity-tag">A/C</span>
+                <span class="amenity-tag">Smart TV</span>
+                <span class="amenity-tag">Workspace</span>
+                <span class="amenity-tag">Free Parking</span>
+                <span class="amenity-tag">Baby Kit</span>
+                <span class="amenity-tag">Ground Floor</span>
+            </div>
+
+            <div class="sub-cta">
+                <a href="https://es-l.airbnb.com/rooms/1211768589707757419" target="_blank" rel="noopener">Book on Airbnb</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="sub-section" style="padding-top: 0;">
+        <div class="gallery-grid">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3da6d761-e423-45e1-b813-86de951aed65.jpg" alt="Living room" class="wide" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/3b2201c5-d64c-4fd8-a6db-b1c4810a0172.jpg" alt="Living room" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/2873806e-8c64-4be4-87d5-14d121f4a8cf.jpg" alt="Kitchen" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/dd525ee3-f249-43b4-a081-0bb0d5bd03bb.jpeg" alt="Dining room" class="tall" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/d4ae7ec0-50d7-4406-887e-8ce52ad32388.jpeg" alt="Main bedroom" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/25d49c0c-32e7-4af0-9507-1d23db8b8bde.jpeg" alt="Second bedroom" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/49b86568-17e8-4beb-a955-31a01a6a5617.jpeg" alt="Third bedroom" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/f0112346-ec54-4ee2-a7f5-8899b78f5944.jpg" alt="Bathroom" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/22063d0f-1a84-4cd9-ae9e-41ff602fe51c.jpeg" alt="Garden terrace" class="wide" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/7564eec4-7888-4aaa-a7e3-807b13dc24c4.jpg" alt="Workspace" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/fb7f153b-ec42-40f1-8d2c-3dfa7fcc0269.jpeg" alt="Exterior" loading="lazy">
+            <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/74e49e85-8662-4c98-8095-bd7fa73dda9b.jpg" alt="Kitchen detail" loading="lazy">
+        </div>
+    </section>
+
+    <!-- Other Residences -->
+    <section class="others-section">
+        <h2>Explore other residences</h2>
+        <div class="others-grid">
+            <a href="maria-elvira.html" class="other-card">
+                <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1209567715223945602/original/9903527d-5b25-4a1c-a3c4-276c529c106e.jpg" alt="Mar&iacute;a Elvira" loading="lazy">
+                <h3>Mar&iacute;a Elvira</h3>
+                <p>Two-Bedroom &middot; 6 guests</p>
+            </a>
+            <a href="isabel.html" class="other-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/1d914f63-4174-4341-ab83-64272c39b1e4.jpeg" alt="Isabel" loading="lazy">
+                <h3>Isabel</h3>
+                <p>Studio &middot; 2 guests</p>
+            </a>
+            <a href="silvia.html" class="other-card">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE3ODI0MTM1OTMzNTYwMzMyNw%3D%3D/original/5aa0fd39-5d31-420a-adad-28851567227c.jpeg" alt="Silvia" loading="lazy">
+                <h3>Silvia</h3>
+                <p>Studio with Balcony &middot; 2 guests</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="botanical-stamp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C08B7A" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V14"/><path d="M12 14c0-4 5-7 9-6-1 5-5 7-9 6z"/><path d="M12 16c0-3-4-6-8-5 1 4 4 6 8 5z"/><path d="M12 10c0-3 3-5 6-5-0.5 3-3 5-6 5z"/><path d="M12 12c0-2-3-4-5-4 0.5 3 2 5 5 4z"/><path d="M12 7c0-2 2-4 4-4-0.5 2-2 4-4 4z"/><path d="M12 9c0-2-2-3-3-3 0.5 2 1 3 3 3z"/></svg>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-name">Casa Caravana Boutique Residences</div>
+                <div class="footer-brand-tagline" data-en="Design residences in the heart of Polanco" data-es="Residencias de dise&ntilde;o en el coraz&oacute;n de Polanco">Design residences in the heart of Polanco</div>
+            </div>
+            <div class="footer-nav">
+                <a href="#espacios" data-en="Our Spaces" data-es="Espacios">Our Spaces</a>
+                <a href="#barrio" data-en="The Neighborhood" data-es="El Barrio">The Neighborhood</a>
+                <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+            <div class="footer-partner">
+                <p data-en="A sister project of" data-es="Un proyecto hermano de">A sister project of</p>
+                <a href="https://www.lacaravanacreativa.com/" target="_blank" rel="noopener">La Caravana Creativa</a>
+                <div style="margin-top: 1rem; display: flex; gap: 0.8rem;">
+                    <a href="https://www.instagram.com/casa_caravana_boutique/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--accent);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        @casa_caravana_boutique
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Casa Caravana Boutique Residences &middot; Descartes 47, Mexico City
+        </div>
+    </footer>
+
+</body>
+</html>
