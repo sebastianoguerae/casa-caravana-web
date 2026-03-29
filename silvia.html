@@ -1738,18 +1738,21 @@
 </head>
 <body>
     <!-- Nav -->
-    <nav id="navbar" class="scrolled">
+    <nav class="nav" id="navbar">
         <a href="index.html" class="nav-logo">
             <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Casa Caravana" class="nav-logo-img" style="height:32px; object-fit:contain;">
             <span class="nav-logo-divider" style="width:1px; height:24px; background:var(--divider); margin:0 0.6rem;"></span>
             <span class="nav-logo-text" style="font-family:'Playfair Display',Georgia,serif; font-size:1.1rem; color:var(--text);">Casa Caravana</span>
         </a>
-        <ul class="nav-links">
-            <li><a href="index.html#espacios">Our Spaces</a></li>
-            <li><a href="index.html#barrio">The Neighborhood</a></li>
-            <li><a href="index.html#contacto">Contact</a></li>
-            <li><a href="https://es-l.airbnb.com/rooms/1178241359335603327" target="_blank" rel="noopener" class="btn-reservar">Book Now</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="cecilia.html">Cecilia</a>
+            <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
+            <a href="isabel.html">Isabel</a>
+            <a href="silvia.html">Silvia</a>
+            <a href="index.html#barrio">The Neighborhood</a>
+            <a href="index.html#contacto">Contact</a>
+            <a href="https://es-l.airbnb.com/rooms/1178241359335603327" target="_blank" rel="noopener" class="btn-reservar">Book Now</a>
+        </div>
     </nav>
 
     <!-- Hero -->
@@ -1864,5 +1867,15 @@
         </div>
     </footer>
 
+
+    <script>
+        var nav = document.getElementById('navbar');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 80) { nav.classList.add('scrolled'); } 
+                else { nav.classList.remove('scrolled'); }
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustar Elefante en C&iacute;rculo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; padding: 2rem; min-height: 100vh; }
+        h1 { font-size: 1.2rem; font-weight: 400; margin-bottom: 0.5rem; }
+        p { font-size: 0.75rem; color: #999; margin-bottom: 2rem; }
+
+        .preview-area {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .circle-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: white;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #444;
+            cursor: grab;
+        }
+        .circle-container:active { cursor: grabbing; }
+        .circle-container img {
+            position: absolute;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .small-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        .circle-sm {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle-sm img {
+            position: absolute;
+            user-select: none;
+        }
+        .circle-xs {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle-xs img {
+            position: absolute;
+            user-select: none;
+        }
+        .preview-label { font-size: 0.6rem; color: #666; text-align: center; }
+
+        .controls {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 0.8rem 1rem;
+            align-items: center;
+            background: #2a2a2a;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            min-width: 400px;
+        }
+        .controls label {
+            font-size: 0.75rem;
+            color: #aaa;
+            text-align: right;
+        }
+        .controls input[type="range"] {
+            width: 100%;
+            accent-color: #C08B7A;
+        }
+        .controls .val {
+            font-size: 0.7rem;
+            color: #C08B7A;
+            font-family: monospace;
+            min-width: 50px;
+        }
+
+        .output {
+            background: #2a2a2a;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+        }
+        .output h3 { font-size: 0.7rem; font-weight: 400; color: #666; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.8rem; }
+        .output pre {
+            font-size: 0.7rem;
+            color: #C08B7A;
+            white-space: pre-wrap;
+            word-break: break-all;
+            line-height: 1.6;
+        }
+        .copy-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #C08B7A;
+            color: white;
+            border: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .copy-btn:hover { background: #A8756A; }
+
+        .hint { font-size: 0.65rem; color: #555; margin-top: 1rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+<h1>Centra el elefante en el c&iacute;rculo</h1>
+<p>Arrastra la imagen o usa los controles. Los previews peque&ntilde;os se actualizan en tiempo real.</p>
+
+<div class="preview-area">
+    <div class="circle-container" id="circle">
+        <img id="elephant" src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Elefante" draggable="false">
+    </div>
+    <div class="small-preview">
+        <div>
+            <div class="circle-sm" id="previewSm"><img draggable="false"></div>
+            <div class="preview-label">80px</div>
+        </div>
+        <div>
+            <div class="circle-xs" id="previewXs"><img draggable="false"></div>
+            <div class="preview-label">40px (nav)</div>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <label>Zoom</label>
+    <input type="range" id="scaleSlider" min="80" max="400" value="180" step="5">
+    <span class="val" id="scaleVal">180%</span>
+
+    <label>Horizontal</label>
+    <input type="range" id="xSlider" min="-200" max="100" value="-70" step="2">
+    <span class="val" id="xVal">-70px</span>
+
+    <label>Vertical</label>
+    <input type="range" id="ySlider" min="-200" max="100" value="-30" step="2">
+    <span class="val" id="yVal">-30px</span>
+</div>
+
+<div class="output">
+    <h3>CSS para copiar</h3>
+    <pre id="cssOutput"></pre>
+    <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('cssOutput').textContent)">Copiar CSS</button>
+</div>
+
+<div class="hint">Tambi&eacute;n puedes arrastrar la imagen directamente dentro del c&iacute;rculo grande</div>
+
+<script>
+    const img = document.getElementById('elephant');
+    const circle = document.getElementById('circle');
+    const scaleSlider = document.getElementById('scaleSlider');
+    const xSlider = document.getElementById('xSlider');
+    const ySlider = document.getElementById('ySlider');
+    const scaleVal = document.getElementById('scaleVal');
+    const xVal = document.getElementById('xVal');
+    const yVal = document.getElementById('yVal');
+    const cssOutput = document.getElementById('cssOutput');
+    const previewSm = document.querySelector('#previewSm img');
+    const previewXs = document.querySelector('#previewXs img');
+
+    previewSm.src = img.src;
+    previewXs.src = img.src;
+
+    function update() {
+        const scale = scaleSlider.value;
+        const x = xSlider.value;
+        const y = ySlider.value;
+
+        img.style.width = scale + '%';
+        img.style.height = 'auto';
+        img.style.left = x + 'px';
+        img.style.top = y + 'px';
+
+        // Scale for small previews
+        const smRatio = 80 / 200;
+        previewSm.style.width = (scale * smRatio) + '%';
+        previewSm.style.height = 'auto';
+        previewSm.style.left = (x * smRatio) + 'px';
+        previewSm.style.top = (y * smRatio) + 'px';
+
+        const xsRatio = 40 / 200;
+        previewXs.style.width = (scale * xsRatio) + '%';
+        previewXs.style.height = 'auto';
+        previewXs.style.left = (x * xsRatio) + 'px';
+        previewXs.style.top = (y * xsRatio) + 'px';
+
+        scaleVal.textContent = scale + '%';
+        xVal.textContent = x + 'px';
+        yVal.textContent = y + 'px';
+
+        cssOutput.textContent = `.elephant-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+.elephant-circle img {
+    position: absolute;
+    width: ${scale}%;
+    height: auto;
+    left: ${x * (100/200)}px;
+    top: ${y * (100/200)}px;
+}`;
+    }
+
+    scaleSlider.addEventListener('input', update);
+    xSlider.addEventListener('input', update);
+    ySlider.addEventListener('input', update);
+
+    // Drag support
+    let dragging = false, startX, startY, origX, origY;
+    circle.addEventListener('mousedown', (e) => {
+        dragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        origX = parseInt(xSlider.value);
+        origY = parseInt(ySlider.value);
+    });
+    window.addEventListener('mousemove', (e) => {
+        if (!dragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        xSlider.value = Math.max(-200, Math.min(100, origX + dx));
+        ySlider.value = Math.max(-200, Math.min(100, origY + dy));
+        update();
+    });
+    window.addEventListener('mouseup', () => { dragging = false; });
+
+    // Scroll to zoom
+    circle.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        scaleSlider.value = Math.max(80, Math.min(400, parseInt(scaleSlider.value) - e.deltaY / 2));
+        update();
+    });
+
+    update();
+</script>
+
+</body>
+</html>

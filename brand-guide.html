@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Caravana — Brand Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; font-weight: 300; background: #FDFBF8; color: #2B2B2B; line-height: 1.8; }
+
+        .page-header { text-align: center; padding: 4rem 2rem 3rem; border-bottom: 1px solid #E8E2DB; }
+        .page-header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 2.2rem; }
+        .page-header p { font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: #9A948D; margin-top: 0.5rem; }
+
+        .section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; border-bottom: 1px solid #E8E2DB; }
+        .section:last-child { border-bottom: none; }
+        .label { font-size: 0.6rem; letter-spacing: 5px; text-transform: uppercase; color: #C08B7A; margin-bottom: 1.5rem; display: block; }
+        .section h2 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.7rem; margin-bottom: 0.8rem; }
+        .section > p { color: #5C5650; font-size: 0.85rem; max-width: 600px; }
+
+        /* LOGO */
+        .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .logo-card { text-align: center; padding: 3rem 2rem; border: 1px solid #E8E2DB; }
+        .logo-card.dark { background: #2B2B2B; }
+        .logo-card.linen { background: #F5F0EC; }
+        .logo-card img { height: 60px; object-fit: contain; }
+        .logo-card .brand { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-top: 0.8rem; color: #2B2B2B; }
+        .logo-card .sub { font-size: 0.5rem; letter-spacing: 5px; text-transform: uppercase; color: #9A948D; margin-top: 0.2rem; }
+        .logo-card.dark .brand { color: #FDFBF8; }
+        .logo-card.dark .sub { color: rgba(255,255,255,0.4); }
+        .logo-card .card-label { font-size: 0.55rem; letter-spacing: 2px; text-transform: uppercase; color: #9A948D; margin-top: 1.5rem; }
+        .logo-card.dark .card-label { color: rgba(255,255,255,0.3); }
+
+        .elephant-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+        .elephant-circle img {
+            position: absolute;
+            width: 145%;
+            height: auto;
+            left: -24px;
+            top: -39px;
+        }
+
+        .logo-horiz { display: flex; align-items: center; gap: 1.2rem; justify-content: center; }
+        .logo-horiz img { height: 45px; }
+        .logo-horiz div { border-left: 1px solid #E8E2DB; padding-left: 1.2rem; text-align: left; }
+        .logo-card.dark .logo-horiz div { border-left-color: rgba(255,255,255,0.15); }
+
+        /* PALETTES */
+        .palette-block { margin-top: 2.5rem; }
+        .palette-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 0.2rem; }
+        .palette-desc { font-size: 0.75rem; color: #9A948D; margin-bottom: 0.8rem; }
+        .palette-row { display: flex; gap: 0; height: 90px; border-radius: 4px; overflow: hidden; }
+        .palette-swatch { flex: 1; display: flex; align-items: flex-end; padding: 0.5rem; font-size: 0.5rem; letter-spacing: 1px; }
+        .tag { display: inline-block; padding: 0.15rem 0.6rem; background: #F5F0EC; font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: #C08B7A; margin-left: 0.5rem; vertical-align: middle; }
+
+        /* TYPOGRAPHY */
+        .type-grid { display: grid; gap: 2rem; margin-top: 3rem; }
+        .type-opt { padding: 2.5rem; border: 1px solid #E8E2DB; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+        .type-opt .name { font-size: 2.5rem; line-height: 1.1; color: #2B2B2B; }
+        .type-opt .sub { font-family: 'Montserrat',sans-serif; font-size: 0.55rem; letter-spacing: 5px; text-transform: uppercase; color: #9A948D; margin-top: 0.3rem; }
+        .type-opt .meta { font-size: 0.7rem; color: #9A948D; text-align: right; line-height: 1.7; }
+        .type-opt .meta strong { color: #5C5650; }
+
+        /* VOICE */
+        .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+        .voice-grid h3 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.1rem; margin-bottom: 0.8rem; }
+        .voice-grid p { font-size: 0.8rem; color: #5C5650; line-height: 2; }
+
+        @media (max-width: 768px) {
+            .logo-grid { grid-template-columns: 1fr; }
+            .type-opt { grid-template-columns: 1fr; }
+            .voice-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <h1>Casa Caravana</h1>
+    <p>Identidad de Marca</p>
+</div>
+
+<!-- 01: LOGO -->
+<div class="section">
+    <span class="label">01 — El Logo</span>
+    <h2>El elefante de La Caravana</h2>
+    <p>Usamos el elefante original de La Caravana Creativa como s&iacute;mbolo de Casa Caravana. Conecta ambas marcas y le da personalidad inmediata a la identidad.</p>
+
+    <div class="logo-grid">
+        <div class="logo-card">
+            <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Elefante">
+            <div class="brand">Casa Caravana</div>
+            <div class="sub">Boutique Apartments</div>
+            <div class="card-label">Vertical &mdash; sobre blanco</div>
+        </div>
+
+        <div class="logo-card linen">
+            <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Elefante">
+            <div class="brand">Casa Caravana</div>
+            <div class="sub">Boutique Apartments &middot; Polanco</div>
+            <div class="card-label">Vertical &mdash; sobre lino</div>
+        </div>
+
+        <div class="logo-card dark">
+            <div class="elephant-circle">
+                <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Elefante">
+            </div>
+            <div class="brand">Casa Caravana</div>
+            <div class="sub">Boutique Apartments</div>
+            <div class="card-label">Vertical &mdash; sobre oscuro (en c&iacute;rculo)</div>
+        </div>
+
+        <div class="logo-card" style="grid-column: 1 / -1;">
+            <div class="logo-horiz">
+                <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Elefante">
+                <div>
+                    <div class="brand" style="font-size: 1.3rem;">Casa Caravana</div>
+                    <div class="sub">Boutique Apartments &middot; Polanco, CDMX</div>
+                </div>
+            </div>
+            <div class="card-label">Horizontal &mdash; para navegaci&oacute;n y headers</div>
+        </div>
+    </div>
+</div>
+
+<!-- 02: PALETTES -->
+<div class="section">
+    <span class="label">02 — Paleta de Color</span>
+    <h2>El rosa del elefante como punto de partida</h2>
+    <p>El rosa acuarela del logo define el acento de la marca. Lo acompa&ntilde;amos con tonos neutros c&aacute;lidos que mantienen la l&iacute;nea de lujo.</p>
+
+    <div class="palette-block">
+        <div class="palette-name">1. Rosa Empolvado y Lino <span class="tag">Recomendada</span></div>
+        <div class="palette-desc">El rosa del elefante como acento. Neutros c&aacute;lidos para todo lo dem&aacute;s. Elegante, femenino sin ser cursi, c&aacute;lido.</div>
+        <div class="palette-row">
+            <div class="palette-swatch" style="background:#2B2B2B; color:white;"><span>Carb&oacute;n</span></div>
+            <div class="palette-swatch" style="background:#C08B7A; color:white;"><span>Rosa arcilla</span></div>
+            <div class="palette-swatch" style="background:#D4A99A; color:white;"><span>Durazno</span></div>
+            <div class="palette-swatch" style="background:#E0CFC4;"><span>Rubor</span></div>
+            <div class="palette-swatch" style="background:#F5F0EC;"><span>Lino rosa</span></div>
+            <div class="palette-swatch" style="background:#FDFBF9; border:1px solid #E8E2DB;"><span>Blanco c&aacute;lido</span></div>
+        </div>
+    </div>
+
+    <div class="palette-block">
+        <div class="palette-name">2. Terracota y Arena</div>
+        <div class="palette-desc">M&aacute;s terroso, menos rosa. Arcilla mexicana, desierto, adobe. Fuerte y neutral.</div>
+        <div class="palette-row">
+            <div class="palette-swatch" style="background:#2B2B2B; color:white;"><span>Carb&oacute;n</span></div>
+            <div class="palette-swatch" style="background:#B8856C; color:white;"><span>Terracota</span></div>
+            <div class="palette-swatch" style="background:#C9A48E; color:white;"><span>Canela</span></div>
+            <div class="palette-swatch" style="background:#D4C5B5;"><span>Arena</span></div>
+            <div class="palette-swatch" style="background:#F6F2ED;"><span>Lino</span></div>
+            <div class="palette-swatch" style="background:#FDFBF8; border:1px solid #E8E2DB;"><span>Blanco</span></div>
+        </div>
+    </div>
+
+    <div class="palette-block">
+        <div class="palette-name">3. Rosa + Verde Salvia</div>
+        <div class="palette-desc">El rosa del elefante complementado con verde suave. Jard&iacute;n, frescura, terraza. Contraste sutil y sofisticado.</div>
+        <div class="palette-row">
+            <div class="palette-swatch" style="background:#2C332E; color:white;"><span>Bosque oscuro</span></div>
+            <div class="palette-swatch" style="background:#7A9B86; color:white;"><span>Salvia</span></div>
+            <div class="palette-swatch" style="background:#C08B7A; color:white;"><span>Rosa arcilla</span></div>
+            <div class="palette-swatch" style="background:#D4C8BE;"><span>Piedra</span></div>
+            <div class="palette-swatch" style="background:#F2EFEA;"><span>Niebla</span></div>
+            <div class="palette-swatch" style="background:#FBFAF8; border:1px solid #E8E2DB;"><span>Blanco</span></div>
+        </div>
+    </div>
+
+    <div class="palette-block">
+        <div class="palette-name">4. Rosa + Marino</div>
+        <div class="palette-desc">Azul profundo con el rosa como acento. Cl&aacute;sico hotelero, contrastante, serio pero c&aacute;lido. Tipo Soho House.</div>
+        <div class="palette-row">
+            <div class="palette-swatch" style="background:#1C2536; color:white;"><span>Marino</span></div>
+            <div class="palette-swatch" style="background:#2E4057; color:white;"><span>Azul noche</span></div>
+            <div class="palette-swatch" style="background:#C08B7A; color:white;"><span>Rosa arcilla</span></div>
+            <div class="palette-swatch" style="background:#D4C9B8;"><span>Trigo</span></div>
+            <div class="palette-swatch" style="background:#F2EFE9;"><span>Marfil</span></div>
+            <div class="palette-swatch" style="background:#FCFBF8; border:1px solid #E8E2DB;"><span>Blanco</span></div>
+        </div>
+    </div>
+
+    <div class="palette-block">
+        <div class="palette-name">5. Rosa + Selva</div>
+        <div class="palette-desc">Verde oscuro tropical + rosa fuerte. M&eacute;xico contempor&aacute;neo, exuberante. Tipo Grupo Habita o Casa Etelvina.</div>
+        <div class="palette-row">
+            <div class="palette-swatch" style="background:#1E2E24; color:white;"><span>Selva</span></div>
+            <div class="palette-swatch" style="background:#3D5C4A; color:white;"><span>Verde bosque</span></div>
+            <div class="palette-swatch" style="background:#D4887A; color:white;"><span>Coral</span></div>
+            <div class="palette-swatch" style="background:#D9C4A0;"><span>Mostaza suave</span></div>
+            <div class="palette-swatch" style="background:#F2EDE5;"><span>Cantera</span></div>
+            <div class="palette-swatch" style="background:#FDFBF7; border:1px solid #E8E2DB;"><span>Blanco</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- 03: TYPOGRAPHY -->
+<div class="section">
+    <span class="label">03 — Tipograf&iacute;a</span>
+    <h2>El nombre de la marca</h2>
+    <p>Cuatro opciones. Cada una define un tono diferente.</p>
+
+    <div class="type-grid">
+        <div class="type-opt">
+            <div>
+                <div class="name" style="font-family:'Playfair Display',serif; font-weight:400;">Casa Caravana</div>
+                <div class="sub">Boutique Apartments &middot; Polanco</div>
+            </div>
+            <div class="meta"><strong>Playfair Display</strong><br>Editorial, alto contraste.<br>Lujo europeo, revista de dise&ntilde;o.<br><span class="tag">Recomendada</span></div>
+        </div>
+        <div class="type-opt">
+            <div>
+                <div class="name" style="font-family:'DM Serif Display',serif; font-weight:400;">Casa Caravana</div>
+                <div class="sub">Boutique Apartments &middot; Polanco</div>
+            </div>
+            <div class="meta"><strong>DM Serif Display</strong><br>Moderna, curvas suaves.<br>Hospitalidad c&aacute;lida.</div>
+        </div>
+        <div class="type-opt">
+            <div>
+                <div class="name" style="font-family:'Lora',serif; font-weight:400;">Casa Caravana</div>
+                <div class="sub">Boutique Apartments &middot; Polanco</div>
+            </div>
+            <div class="meta"><strong>Lora</strong><br>Equilibrada, accesible.<br>Elegancia sin esfuerzo.</div>
+        </div>
+        <div class="type-opt">
+            <div>
+                <div class="name" style="font-family:'Montserrat',sans-serif; font-weight:200; letter-spacing:8px; text-transform:uppercase; font-size:1.7rem;">Casa Caravana</div>
+                <div class="sub" style="letter-spacing:6px;">Boutique Apartments &middot; Polanco</div>
+            </div>
+            <div class="meta"><strong>Montserrat Light Caps</strong><br>Ultra minimal, limpia.<br>Tipo Aman, Edition Hotels.</div>
+        </div>
+    </div>
+</div>
+
+<!-- 04: VOICE -->
+<div class="section">
+    <span class="label">04 — Voz de Marca</span>
+    <h2>C&oacute;mo hablamos</h2>
+
+    <div class="voice-grid">
+        <div>
+            <h3 style="color: #7A9B86;">S&iacute;</h3>
+            <p>
+                &ldquo;Tres terrazas para brindar al atardecer&rdquo;<br>
+                &ldquo;Pensado para quienes viajan con intenci&oacute;n&rdquo;<br>
+                &ldquo;S&aacute;banas de calidad hotelera&rdquo;<br>
+                &ldquo;A pasos de Polanco y Chapultepec&rdquo;<br>
+                &ldquo;Tu base para descubrir la ciudad&rdquo;
+            </p>
+        </div>
+        <div>
+            <h3 style="color: #C08B7A;">No</h3>
+            <p>
+                &ldquo;Departamento SUPER bien ubicado!!!&rdquo;<br>
+                &ldquo;Tiene WiFi, TV, micro, tostadora...&rdquo;<br>
+                &ldquo;No se permiten fiestas ni mascotas&rdquo;<br>
+                &ldquo;Reserva YA antes de que se agote!&rdquo;<br>
+                &ldquo;El MEJOR Airbnb de Polanco&rdquo;
+            </p>
+        </div>
+    </div>
+    <div style="margin-top: 2.5rem; padding: 2rem; background: #F5F0EC; font-size: 0.8rem; line-height: 2; color: #5C5650;">
+        <strong>Principio:</strong> Escribimos como un anfitri&oacute;n sofisticado que te recibe en su casa. Evocamos, no listamos. Sugerimos, no imponemos. Cada palabra es una invitaci&oacute;n, no un anuncio.
+    </div>
+</div>
+
+</body>
+</html>

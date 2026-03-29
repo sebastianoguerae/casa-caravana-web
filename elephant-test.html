@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elefante — Iteraci&oacute;n 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; font-weight: 300; background: #FDFBF8; color: #2B2B2B; }
+        .header { text-align: center; padding: 3rem 2rem 2rem; border-bottom: 1px solid #E8E2DB; }
+        .header h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.8rem; }
+        .ref { text-align: center; padding: 2rem; }
+        .ref img { height: 100px; }
+        .ref p { font-size: 0.6rem; color: #9A948D; letter-spacing: 3px; text-transform: uppercase; margin-top: 0.5rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+        .card {
+            text-align: center;
+            padding: 3rem 2rem 2rem;
+            border: 1px solid #E8E2DB;
+        }
+        .card h4 { font-weight: 500; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 1.5rem; }
+        .card p { font-size: 0.7rem; color: #9A948D; margin-top: 0.3rem; line-height: 1.6; }
+        .card.dark { background: #2B2B2B; }
+        .card.dark h4, .card.dark p { color: rgba(255,255,255,0.5); }
+        .card.linen { background: #F6F2ED; }
+        .tag { display: inline-block; padding: 0.15rem 0.6rem; background: #F6F2ED; font-size: 0.5rem; letter-spacing: 2px; text-transform: uppercase; color: #9B8574; margin-top: 0.5rem; }
+        .sep { text-align: center; padding: 2rem; border-top: 1px solid #E8E2DB; }
+        .sep p { font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: #9A948D; }
+        .lockup-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem; padding: 0 2rem; }
+        .lockup-item { border: 1px solid #E8E2DB; padding: 3rem 2rem; text-align: center; }
+        @media (max-width: 768px) { .grid, .lockup-row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>El Elefante — Iteraci&oacute;n 3</h1>
+</div>
+
+<div class="ref">
+    <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_0,y_1397,w_5905,h_2975/fill/w_778,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Referencia">
+    <p>Referencia: cabeza grande con domo, trompa baja y sube, cuerpo compacto</p>
+</div>
+
+<div class="grid">
+
+    <!-- VERSION 1: Composed shapes - solid taupe -->
+    <div class="card">
+        <svg width="140" height="130" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <clipPath id="bodyClip1">
+                    <rect x="0" y="0" width="280" height="260"/>
+                </clipPath>
+            </defs>
+            <!-- BODY: large horizontal oval -->
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="#9B8574"/>
+            <!-- HEAD: large circle, overlapping body on left -->
+            <circle cx="90" cy="90" r="55" fill="#9B8574"/>
+            <!-- Head dome bump on top -->
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="#9B8574"/>
+            <!-- TRUNK: starts from lower-front of head, goes down then curls up -->
+            <path d="M 52 110 C 42 125, 30 140, 28 150 C 26 160, 30 165, 35 158 C 38 152, 38 142, 42 135 C 44 130, 48 128, 50 125" fill="#9B8574" stroke="#9B8574" stroke-width="3"/>
+            <!-- Trunk as thick curved line for cleaner look -->
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#9B8574" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <!-- EAR: large, behind head -->
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#876E5F"/>
+            <!-- EYE -->
+            <circle cx="80" cy="82" r="4" fill="white"/>
+            <circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+            <!-- TUSK -->
+            <path d="M 62 112 C 58 120, 62 126, 66 122" stroke="#F6F2ED" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- LEGS -->
+            <!-- Front left -->
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+            <!-- Front right -->
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#8A7565"/>
+            <!-- Back left -->
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+            <!-- Back right -->
+            <rect x="210" y="155" width="18" height="55" rx="8" fill="#8A7565"/>
+            <!-- TAIL -->
+            <path d="M 237 100 C 250 92, 255 105, 248 112 C 246 115, 244 118, 246 122" stroke="#9B8574" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- BLANKET / SADDLE -->
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white" opacity="0.92"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="#9B8574" stroke-width="1.5" fill="none"/>
+            <!-- Blanket trim top -->
+            <path d="M 108 76 C 120 71, 178 73, 222 80" stroke="#C4856C" stroke-width="1"/>
+            <!-- Blanket trim bottom -->
+            <path d="M 115 135 C 145 143, 195 142, 215 133" stroke="#C4856C" stroke-width="1"/>
+            <!-- Blanket dots -->
+            <circle cx="145" cy="95" r="3" fill="#C4856C"/>
+            <circle cx="162" cy="96" r="3" fill="#C4856C"/>
+            <circle cx="179" cy="97" r="3" fill="#C4856C"/>
+            <circle cx="153" cy="112" r="2.5" fill="#C4856C" opacity="0.7"/>
+            <circle cx="170" cy="113" r="2.5" fill="#C4856C" opacity="0.7"/>
+            <!-- Blanket scalloped edge -->
+            <path d="M 115 140 C 120 146, 128 146, 133 140 C 138 146, 146 146, 151 140 C 156 146, 164 146, 169 140 C 174 146, 182 146, 187 140 C 192 146, 200 146, 205 140 C 210 146, 215 143, 215 138" stroke="#C4856C" stroke-width="1" fill="none"/>
+        </svg>
+        <h4>A. Silueta compuesta</h4>
+        <p>Formas simples combinadas. Cabeza grande con domo, trompa que baja y sube. Manta blanca ornamental.</p>
+        <span class="tag">Recomendada</span>
+    </div>
+
+    <!-- VERSION 2: Watercolor gradient -->
+    <div class="card">
+        <svg width="140" height="130" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="wc2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#DEADA0"/>
+                    <stop offset="35%" stop-color="#D4998A"/>
+                    <stop offset="70%" stop-color="#C4856C"/>
+                    <stop offset="100%" stop-color="#A87260"/>
+                </linearGradient>
+            </defs>
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="url(#wc2)"/>
+            <circle cx="90" cy="90" r="55" fill="url(#wc2)"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="url(#wc2)"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="url(#wc2)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#C07A65"/>
+            <circle cx="80" cy="82" r="4" fill="white"/>
+            <circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+            <path d="M 62 112 C 58 120, 62 126, 66 122" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="url(#wc2)"/>
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#B87A64"/>
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="url(#wc2)"/>
+            <rect x="210" y="155" width="18" height="52" rx="8" fill="#B87A64"/>
+            <path d="M 237 100 C 250 92, 255 105, 248 112 C 246 115, 244 118, 246 122" stroke="url(#wc2)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- White blanket -->
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white"/>
+            <!-- Ornamental details on blanket -->
+            <path d="M 108 76 C 120 71, 178 73, 222 80" stroke="#D4998A" stroke-width="1.2"/>
+            <path d="M 106 88 C 118 84, 180 86, 225 92" stroke="#D4998A" stroke-width="0.8"/>
+            <path d="M 106 104 C 118 100, 180 102, 224 106" stroke="#D4998A" stroke-width="0.8"/>
+            <path d="M 108 120 C 120 117, 180 118, 220 122" stroke="#D4998A" stroke-width="0.8"/>
+            <path d="M 115 135 C 145 143, 195 142, 215 133" stroke="#D4998A" stroke-width="1.2"/>
+            <circle cx="145" cy="95" r="3" fill="#D4998A"/>
+            <circle cx="162" cy="96" r="3" fill="#D4998A"/>
+            <circle cx="179" cy="97" r="3" fill="#D4998A"/>
+            <circle cx="153" cy="112" r="2.5" fill="#C4856C" opacity="0.7"/>
+            <circle cx="170" cy="113" r="2.5" fill="#C4856C" opacity="0.7"/>
+            <path d="M 115 140 C 120 146, 128 146, 133 140 C 138 146, 146 146, 151 140 C 156 146, 164 146, 169 140 C 174 146, 182 146, 187 140 C 192 146, 200 146, 205 140 C 210 146, 215 143, 215 138" stroke="#D4998A" stroke-width="1" fill="none"/>
+        </svg>
+        <h4>B. Acuarela c&aacute;lida</h4>
+        <p>Degradado rosa-terracota como el original. Manta blanca con detalles ornamentales y borde festoneado.</p>
+        <span class="tag">M&aacute;s fiel al original</span>
+    </div>
+
+    <!-- VERSION 3: Clean line art -->
+    <div class="card">
+        <svg width="140" height="130" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="165" cy="115" rx="75" ry="55" stroke="#9B8574" stroke-width="2"/>
+            <circle cx="90" cy="90" r="55" stroke="#9B8574" stroke-width="2"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" stroke="#9B8574" stroke-width="2"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#9B8574" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" stroke="#9B8574" stroke-width="1.5" fill="none"/>
+            <circle cx="80" cy="82" r="3" fill="#9B8574"/>
+            <line x1="108" y1="160" x2="108" y2="210" stroke="#9B8574" stroke-width="2" stroke-linecap="round"/>
+            <line x1="133" y1="163" x2="133" y2="210" stroke="#9B8574" stroke-width="2" stroke-linecap="round"/>
+            <line x1="193" y1="160" x2="193" y2="210" stroke="#9B8574" stroke-width="2" stroke-linecap="round"/>
+            <line x1="218" y1="160" x2="218" y2="210" stroke="#9B8574" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 237 100 C 250 92, 255 105, 248 112" stroke="#9B8574" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Blanket outline only -->
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="#9B8574" stroke-width="1.5" fill="none"/>
+            <circle cx="145" cy="95" r="2.5" stroke="#9B8574" stroke-width="1" fill="none"/>
+            <circle cx="162" cy="96" r="2.5" stroke="#9B8574" stroke-width="1" fill="none"/>
+            <circle cx="179" cy="97" r="2.5" stroke="#9B8574" stroke-width="1" fill="none"/>
+        </svg>
+        <h4>C. L&iacute;nea pura</h4>
+        <p>Solo contornos. Para bordados, marca de agua, papeler&iacute;a fina.</p>
+    </div>
+
+    <!-- VERSION 4: Badge/stamp -->
+    <div class="card linen">
+        <svg width="130" height="130" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="150" cy="140" r="130" stroke="#9B8574" stroke-width="1.5"/>
+            <circle cx="150" cy="140" r="122" stroke="#9B8574" stroke-width="0.5"/>
+            <g transform="translate(30, 30) scale(0.85)">
+                <ellipse cx="165" cy="115" rx="75" ry="55" fill="#9B8574"/>
+                <circle cx="90" cy="90" r="55" fill="#9B8574"/>
+                <ellipse cx="85" cy="48" rx="30" ry="18" fill="#9B8574"/>
+                <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#9B8574" stroke-width="16" fill="none" stroke-linecap="round"/>
+                <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#876E5F"/>
+                <circle cx="80" cy="82" r="4" fill="white"/>
+                <rect x="100" y="155" width="18" height="50" rx="8" fill="#9B8574"/>
+                <rect x="125" y="158" width="18" height="47" rx="8" fill="#8A7565"/>
+                <rect x="185" y="155" width="18" height="50" rx="8" fill="#9B8574"/>
+                <rect x="210" y="155" width="18" height="47" rx="8" fill="#8A7565"/>
+                <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white" opacity="0.25"/>
+                <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="white" stroke-width="1.5" fill="none"/>
+            </g>
+            <text x="150" y="285" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="10" font-weight="400" letter-spacing="5" fill="#9B8574">POLANCO &middot; CDMX</text>
+        </svg>
+        <h4>D. Sello</h4>
+        <p>Favicon, amenidades, sellos.</p>
+    </div>
+
+    <!-- VERSION 5: Dark background -->
+    <div class="card dark">
+        <svg width="140" height="130" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="#D4C5B5"/>
+            <circle cx="90" cy="90" r="55" fill="#D4C5B5"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="#D4C5B5"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#D4C5B5" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#BFB0A0"/>
+            <circle cx="80" cy="82" r="4" fill="#2B2B2B"/>
+            <circle cx="81" cy="82" r="2" fill="#D4C5B5"/>
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="#D4C5B5"/>
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#BFB0A0"/>
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="#D4C5B5"/>
+            <rect x="210" y="155" width="18" height="52" rx="8" fill="#BFB0A0"/>
+            <path d="M 237 100 C 250 92, 255 105, 248 112 C 246 115, 244 118, 246 122" stroke="#D4C5B5" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="#2B2B2B" opacity="0.3"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="#D4C5B5" stroke-width="1" fill="none"/>
+            <circle cx="145" cy="95" r="2.5" fill="#D4C5B5" opacity="0.5"/>
+            <circle cx="162" cy="96" r="2.5" fill="#D4C5B5" opacity="0.5"/>
+            <circle cx="179" cy="97" r="2.5" fill="#D4C5B5" opacity="0.5"/>
+        </svg>
+        <h4>E. Invertido</h4>
+        <p>Para fondos oscuros.</p>
+    </div>
+
+    <!-- VERSION 6: Forest + Gold -->
+    <div class="card">
+        <svg width="140" height="130" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="forest2" x1="0" y1="0" x2="0.5" y2="1">
+                    <stop offset="0%" stop-color="#5B7B6A"/>
+                    <stop offset="100%" stop-color="#3D5C4A"/>
+                </linearGradient>
+            </defs>
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="url(#forest2)"/>
+            <circle cx="90" cy="90" r="55" fill="url(#forest2)"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="url(#forest2)"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="url(#forest2)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#345843"/>
+            <circle cx="80" cy="82" r="4" fill="white"/>
+            <circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="url(#forest2)"/>
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#345843"/>
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="url(#forest2)"/>
+            <rect x="210" y="155" width="18" height="52" rx="8" fill="#345843"/>
+            <path d="M 237 100 C 250 92, 255 105, 248 112 C 246 115, 244 118, 246 122" stroke="url(#forest2)" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <!-- Gold blanket -->
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="#C4A265" opacity="0.85"/>
+            <path d="M 108 76 C 120 71, 178 73, 222 80" stroke="white" stroke-width="0.8" opacity="0.4"/>
+            <path d="M 115 135 C 145 143, 195 142, 215 133" stroke="white" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="145" cy="95" r="2.5" fill="white" opacity="0.5"/>
+            <circle cx="162" cy="96" r="2.5" fill="white" opacity="0.5"/>
+            <circle cx="179" cy="97" r="2.5" fill="white" opacity="0.5"/>
+        </svg>
+        <h4>F. Selva + Oro</h4>
+        <p>Direcci&oacute;n alternativa tropical.</p>
+    </div>
+
+</div>
+
+<div class="sep"><p>Lockups</p></div>
+
+<div class="lockup-row">
+    <!-- Vertical lockup -->
+    <div class="lockup-item">
+        <svg width="60" height="55" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="#9B8574"/>
+            <circle cx="90" cy="90" r="55" fill="#9B8574"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="#9B8574"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#9B8574" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#876E5F"/>
+            <circle cx="80" cy="82" r="4" fill="white"/><circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#8A7565"/>
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+            <rect x="210" y="155" width="18" height="52" rx="8" fill="#8A7565"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white" opacity="0.25"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="white" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #2B2B2B; margin-top: 1rem;">Casa Caravana</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 0.5rem; letter-spacing: 5px; text-transform: uppercase; color: #9A948D; margin-top: 0.3rem;">Boutique Apartments</div>
+    </div>
+
+    <!-- Horizontal lockup -->
+    <div class="lockup-item">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.2rem;">
+            <svg width="42" height="38" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="165" cy="115" rx="75" ry="55" fill="#9B8574"/>
+                <circle cx="90" cy="90" r="55" fill="#9B8574"/>
+                <ellipse cx="85" cy="48" rx="30" ry="18" fill="#9B8574"/>
+                <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="#9B8574" stroke-width="16" fill="none" stroke-linecap="round"/>
+                <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#876E5F"/>
+                <circle cx="80" cy="82" r="4" fill="white"/><circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+                <rect x="100" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+                <rect x="125" y="158" width="18" height="52" rx="8" fill="#8A7565"/>
+                <rect x="185" y="155" width="18" height="55" rx="8" fill="#9B8574"/>
+                <rect x="210" y="155" width="18" height="52" rx="8" fill="#8A7565"/>
+                <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white" opacity="0.25"/>
+                <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" stroke="white" stroke-width="1.5" fill="none"/>
+            </svg>
+            <div style="border-left: 1px solid #E8E2DB; padding-left: 1.2rem; text-align: left;">
+                <div style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #2B2B2B;">Casa Caravana</div>
+                <div style="font-family: 'Montserrat', sans-serif; font-size: 0.42rem; letter-spacing: 4px; text-transform: uppercase; color: #9A948D;">Boutique Apartments &middot; Polanco</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Watercolor lockup -->
+    <div class="lockup-item" style="background: #F6F2ED;">
+        <svg width="60" height="55" viewBox="0 0 280 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="wc3" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#DEADA0"/>
+                    <stop offset="35%" stop-color="#D4998A"/>
+                    <stop offset="70%" stop-color="#C4856C"/>
+                    <stop offset="100%" stop-color="#A87260"/>
+                </linearGradient>
+            </defs>
+            <ellipse cx="165" cy="115" rx="75" ry="55" fill="url(#wc3)"/>
+            <circle cx="90" cy="90" r="55" fill="url(#wc3)"/>
+            <ellipse cx="85" cy="48" rx="30" ry="18" fill="url(#wc3)"/>
+            <path d="M 50 108 C 40 128, 28 148, 25 158 C 22 168, 28 172, 35 165 C 40 160, 38 148, 42 138" stroke="url(#wc3)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 78 60 C 55 55, 42 72, 48 92 C 52 105, 65 108, 75 100" fill="#C07A65"/>
+            <circle cx="80" cy="82" r="4" fill="white"/><circle cx="81" cy="82" r="2" fill="#2B2B2B"/>
+            <rect x="100" y="155" width="18" height="55" rx="8" fill="url(#wc3)"/>
+            <rect x="125" y="158" width="18" height="52" rx="8" fill="#B87A64"/>
+            <rect x="185" y="155" width="18" height="55" rx="8" fill="url(#wc3)"/>
+            <rect x="210" y="155" width="18" height="52" rx="8" fill="#B87A64"/>
+            <path d="M 105 68 C 115 62, 175 65, 220 72 C 225 75, 228 85, 226 100 C 224 115, 218 130, 215 138 C 200 145, 150 148, 115 140 C 108 130, 103 110, 102 90 Z" fill="white"/>
+            <path d="M 108 76 C 120 71, 178 73, 222 80" stroke="#D4998A" stroke-width="1"/>
+            <path d="M 115 135 C 145 143, 195 142, 215 133" stroke="#D4998A" stroke-width="1"/>
+            <circle cx="145" cy="95" r="3" fill="#D4998A"/>
+            <circle cx="162" cy="96" r="3" fill="#D4998A"/>
+            <circle cx="179" cy="97" r="3" fill="#D4998A"/>
+        </svg>
+        <div style="font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #2B2B2B; margin-top: 1rem;">Casa Caravana</div>
+        <div style="font-family: 'Montserrat', sans-serif; font-size: 0.5rem; letter-spacing: 5px; text-transform: uppercase; color: #9A948D; margin-top: 0.3rem;">Boutique Apartments &middot; Polanco</div>
+    </div>
+</div>
+
+<div style="height: 3rem;"></div>
+
+</body>
+</html>
