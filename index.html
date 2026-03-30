@@ -362,30 +362,6 @@
             color: rgba(255,255,255,0.65);
         }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            animation: scrollPulse 2s ease infinite;
-        }
-
-        .scroll-indicator svg {
-            width: 16px;
-            height: 16px;
-            stroke: rgba(255,255,255,0.5);
-        }
-
-        @keyframes scrollPulse {
-            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            50% { opacity: 0.5; transform: translateX(-50%) translateY(6px); }
-        }
-
         /* ─── INTRO ─── */
 
         .intro {
@@ -545,6 +521,13 @@
 
         .property-rating {
             color: var(--gold);
+        }
+
+        .property-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 1rem;
         }
 
         .property-specs {
@@ -1027,44 +1010,6 @@
             color: var(--text-light);
         }
 
-        /* ─── PERSISTENT BOOKING BAR ─── */
-
-        .booking-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 900;
-            height: 50px;
-            background: rgba(253, 251, 249, 0.97);
-            border-top: 1px solid var(--divider);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 3rem;
-        }
-
-        .booking-bar p {
-            font-size: 0.82rem;
-            color: var(--text-body);
-        }
-
-        .booking-bar a {
-            padding: 0.45rem 1.8rem;
-            background: var(--accent);
-            color: #fff;
-            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
-            font-size: 0.65rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-        }
-
-        .booking-bar a:hover {
-            background: var(--accent-hover);
-        }
-
         /* ─── RESPONSIVE ─── */
 
         @media (max-width: 768px) {
@@ -1184,10 +1129,6 @@
                 text-align: left;
             }
 
-            .booking-bar {
-                display: none;
-            }
-
             .image-break {
                 height: 50vh;
             }
@@ -1235,11 +1176,7 @@
             }
         }
 
-        /* Body padding for booking bar on desktop */
         @media (min-width: 769px) {
-            body {
-                padding-bottom: 50px;
-            }
             .booking-bar-mobile { display: none; }
         }
         /* ─── NEIGHBORHOOD GUIDE ─── */
@@ -1765,14 +1702,10 @@
             <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/22063d0f-1a84-4cd9-ae9e-41ff602fe51c.jpeg" alt="Terrace at Casa Caravana Boutique Residences">
         </div>
         <div class="hero-content">
-            <div class="hero-badge" data-en="Anzures, Mexico City — Steps from Polanco" data-es="Anzures, Ciudad de M&eacute;xico — A pasos de Polanco">Anzures, Mexico City — Steps from Polanco</div>
+            <div class="hero-badge" data-en="Anzures, Mexico City — 5 min from Polanco" data-es="Anzures, Ciudad de M&eacute;xico — A 5 min de Polanco">Anzures, Mexico City — 5 min from Polanco</div>
             <h1 class="hero-title">Casa Caravana</h1>
             <div class="hero-subtitle" data-en="Boutique Residences" data-es="Boutique Residences">Boutique Residences</div>
-        </div>
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round">
-                <path d="M8 2 L8 14 M3 9 L8 14 L13 9"/>
-            </svg>
+            <p class="hero-price" data-en="From $140/night" data-es="Desde $140/noche" style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 3px; color: var(--gold); margin-top: 0.5rem;">From $140/night</p>
         </div>
     </section>
 
@@ -1780,7 +1713,7 @@
     <section class="intro">
         <div class="intro-inner fade-in-up">
             <span class="label" data-en="Welcome" data-es="Bienvenidos">Welcome</span>
-            <p data-en="Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, steps from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive." data-es="Cuatro residencias de dise&ntilde;o &mdash; cada una nombrada en honor a una abuela &mdash; en una casa mexicana llena de plantas y luz, completamente renovada, a pasos de Polanco. Cada detalle ha sido cuidado, desde las s&aacute;banas de alto gramaje hasta las recomendaciones locales, para que te sientas en casa desde el primer momento.">Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, steps from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive.</p>
+            <p data-en="Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, a five-minute walk from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive." data-es="Cuatro residencias de dise&ntilde;o &mdash; cada una nombrada en honor a una abuela &mdash; en una casa mexicana llena de plantas y luz, completamente renovada, a cinco minutos caminando de Polanco. Cada detalle ha sido cuidado, desde las s&aacute;banas de alto gramaje hasta las recomendaciones locales, para que te sientas en casa desde el primer momento.">Four design residences &mdash; each named after a grandmother &mdash; in a beautifully renovated Mexican casa filled with plants and light, a five-minute walk from Polanco. Every detail has been considered, from the fine-count sheets to the curated local recommendations, so you feel at home from the moment you arrive.</p>
             <div class="stats-bar">
                 <div class="stat-item">
                     <span class="stat-value">4.91</span>
@@ -1825,6 +1758,34 @@
         </div>
     </section>
 
+    <!-- ─── MEET MARIANA ─── -->
+    <section style="padding: 5rem 5%; background: var(--bg);">
+        <div style="max-width: 700px; margin: 0 auto; text-align: center;" class="fade-in-up">
+            <span class="label" data-en="YOUR HOST" data-es="TU ANFITRIONA">YOUR HOST</span>
+            <h2 class="section-title" data-en="Meet Mariana" data-es="Conoce a Mariana">Meet Mariana</h2>
+            <div style="width: 120px; height: 120px; border-radius: 50%; background: var(--bg-alt); margin: 2rem auto; display: flex; align-items: center; justify-content: center; border: 2px solid var(--divider);">
+                <span style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.5rem; color: var(--accent);">M</span>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; color: var(--gold);">4.91</div>
+                    <div style="font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light);" data-en="Rating" data-es="Calificaci&oacute;n">Rating</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; color: var(--gold);">195+</div>
+                    <div style="font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light);" data-en="Reviews" data-es="Rese&ntilde;as">Reviews</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.3rem; color: var(--gold);">Superhost</div>
+                    <div style="font-size: 0.6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light);">Airbnb</div>
+                </div>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 2; color: var(--text-body); margin-bottom: 1.5rem;" data-en="Mariana is the heart of Casa Caravana. A Mexico City native with a deep love for her neighborhood, she left a career in design to build something more personal — a place where every guest is welcomed the way her grandmothers welcomed her." data-es="Mariana es el coraz&oacute;n de Casa Caravana. Nacida en la Ciudad de M&eacute;xico con un profundo amor por su barrio, dej&oacute; una carrera en dise&ntilde;o para construir algo m&aacute;s personal — un lugar donde cada hu&eacute;sped es recibido como sus abuelas la recib&iacute;an a ella.">Mariana is the heart of Casa Caravana. A Mexico City native with a deep love for her neighborhood, she left a career in design to build something more personal — a place where every guest is welcomed the way her grandmothers welcomed her.</p>
+            <p style="font-size: 0.95rem; line-height: 2; color: var(--text-body); margin-bottom: 1.5rem;" data-en="She personally curates every detail: the neighborhood guide on your nightstand, the local coffee in your kitchen, the restaurant she'll recommend based on what you're craving. 48 hours before your arrival, she sends everything you need — WiFi credentials, building access, parking details, and her personal phone number." data-es="Ella personalmente cura cada detalle: la gu&iacute;a del barrio en tu mesa de noche, el caf&eacute; local en tu cocina, el restaurante que te recomendar&aacute; seg&uacute;n lo que se te antoje. 48 horas antes de tu llegada, te env&iacute;a todo lo que necesitas — credenciales de WiFi, acceso al edificio, detalles de estacionamiento y su n&uacute;mero personal.">She personally curates every detail: the neighborhood guide on your nightstand, the local coffee in your kitchen, the restaurant she'll recommend based on what you're craving. 48 hours before your arrival, she sends everything you need — WiFi credentials, building access, parking details, and her personal phone number.</p>
+            <p style="font-size: 0.95rem; line-height: 2; color: var(--text-body);" data-en="This isn't a property management company. It's one person who genuinely cares about your stay — and it shows in every review." data-es="Esto no es una empresa de administraci&oacute;n de propiedades. Es una persona que genuinamente se preocupa por tu estad&iacute;a — y se nota en cada rese&ntilde;a.">This isn't a property management company. It's one person who genuinely cares about your stay — and it shows in every review.</p>
+        </div>
+    </section>
+
     <!-- ─── FULL-WIDTH IMAGE BREAK ─── -->
     <div class="image-break">
         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg" alt="Exterior terrace at Casa Caravana" loading="lazy">
@@ -1852,13 +1813,14 @@
                     <span class="property-rating">&#9733; 4.96</span>
                     <span data-en="(49 reviews)" data-es="(49 rese&ntilde;as)">(49 reviews)</span>
                 </div>
+                <div class="property-price" data-en="From $320/night" data-es="Desde $320/noche">From $320/night</div>
                 <p class="property-desc" data-en="Three terraces to share morning coffee or an evening toast. Ground-floor access — no stairs, no elevator needed. Our flagship residence &mdash; named after a grandmother who always set the biggest table and made sure no guest left without a full heart." data-es="Tres terrazas para compartir un caf&eacute; por la ma&ntilde;ana o un brindis al atardecer. Acceso en planta baja — sin escaleras, sin necesidad de elevador. Nuestra residencia insignia &mdash; nombrada en honor a una abuela que siempre pon&iacute;a la mesa m&aacute;s grande y se aseguraba de que ning&uacute;n invitado se fuera sin el coraz&oacute;n lleno.">Three terraces to share morning coffee or an evening toast. Ground-floor access — no stairs, no elevator needed. Our flagship residence &mdash; named after a grandmother who always set the biggest table and made sure no guest left without a full heart.</p>
                 <a href="cecilia.html" class="property-link">
                     <span data-en="Explore" data-es="Explorar">Explore</span>
                     <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
                 </a>
                 <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14V7"/><path d="M8 7c0-3 3-5 6-5-1 3-3 5-6 5z"/><path d="M8 9c0-3-3-5-6-5 1 3 3 5 6 5z"/></svg> <span data-en="Garden terraces" data-es="Terrazas con jard&iacute;n">Garden terraces</span></div>
-                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit available" data-es="Kit de beb&eacute; disponible">Baby kit available</span></div>
+                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit — complimentary" data-es="Kit de beb&eacute; — sin costo">Baby kit — complimentary</span></div>
             </div>
         </div>
 
@@ -1874,13 +1836,14 @@
                     <span class="property-rating">&#9733; 4.87</span>
                     <span data-en="(31 reviews)" data-es="(31 rese&ntilde;as)">(31 reviews)</span>
                 </div>
+                <div class="property-price" data-en="From $220/night" data-es="Desde $220/noche">From $220/night</div>
                 <p class="property-desc" data-en="A private terrace, king and queen beds, and complimentary parking &mdash; rare in this neighborhood. Named after a grandmother whose home was always the one everyone wanted to visit." data-es="Terraza privada, cama king y queen y estacionamiento gratuito &mdash; una rareza en la zona. Nombrada en honor a una abuela cuya casa siempre era la que todos quer&iacute;an visitar.">A private terrace, king and queen beds, and complimentary parking &mdash; rare in this neighborhood. Named after a grandmother whose home was always the one everyone wanted to visit.</p>
                 <a href="maria-elvira.html" class="property-link">
                     <span data-en="Explore" data-es="Explorar">Explore</span>
                     <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
                 </a>
                 <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M4 13 Q8 5 12 2"/><path d="M6 11 Q8 7 12 2"/><path d="M4 13 Q6 10 6 7"/><path d="M5 12c-1-2 0-4 2-5"/><path d="M7 10c-2-1-2-3-1-5"/></svg> <span data-en="Green terrace" data-es="Terraza verde">Green terrace</span></div>
-                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit available" data-es="Kit de beb&eacute; disponible">Baby kit available</span></div>
+                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit — complimentary" data-es="Kit de beb&eacute; — sin costo">Baby kit — complimentary</span></div>
             </div>
         </div>
 
@@ -1896,13 +1859,14 @@
                     <span class="property-rating">&#9733; 4.95</span>
                     <span data-en="(44 reviews)" data-es="(44 rese&ntilde;as)">(44 reviews)</span>
                 </div>
+                <div class="property-price" data-en="From $150/night" data-es="Desde $150/noche">From $150/night</div>
                 <p class="property-desc" data-en="A bright retreat on the second floor of our classic Mexican casa. Bright, elegant, and perfectly kept. Fiber-optic WiFi and a dedicated workspace for those who travel with purpose. Named after a grandmother who believed that even the smallest details matter." data-es="Un refugio luminoso en el segundo piso de nuestra casa mexicana cl&aacute;sica. Luminoso, elegante e impecable. WiFi de fibra &oacute;ptica y espacio de trabajo dedicado para quienes viajan con prop&oacute;sito. Nombrada en honor a una abuela que cre&iacute;a que hasta los detalles m&aacute;s peque&ntilde;os importan.">A bright retreat on the second floor of our classic Mexican casa. Bright, elegant, and perfectly kept. Fiber-optic WiFi and a dedicated workspace for those who travel with purpose. Named after a grandmother who believed that even the smallest details matter.</p>
                 <a href="isabel.html" class="property-link">
                     <span data-en="Explore" data-es="Explorar">Explore</span>
                     <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
                 </a>
                 <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14V8"/><path d="M8 8c-2-4-6-4-6-1s4 3 6 1z"/><path d="M8 8c2-4 6-4 6-1s-4 3-6 1z"/><path d="M8 5c-1-3-4-4-4-2s3 3 4 2z"/><path d="M8 5c1-3 4-4 4-2s-3 3-4 2z"/></svg> <span data-en="Indoor plants" data-es="Plantas de interior">Indoor plants</span></div>
-                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit available" data-es="Kit de beb&eacute; disponible">Baby kit available</span></div>
+                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit — complimentary" data-es="Kit de beb&eacute; — sin costo">Baby kit — complimentary</span></div>
             </div>
         </div>
 
@@ -1918,13 +1882,46 @@
                     <span class="property-rating">&#9733; 4.87</span>
                     <span data-en="(71 reviews)" data-es="(71 rese&ntilde;as)">(71 reviews)</span>
                 </div>
+                <div class="property-price" data-en="From $140/night" data-es="Desde $140/noche">From $140/night</div>
                 <p class="property-desc" data-en="Perched on the second floor with views over the neighborhood. Our most reviewed residence. A balcony with a view, a quiet corner of the city, and everything you need to feel at home. Named after a grandmother who had the gift of making everyone feel welcome." data-es="En el segundo piso con vista al barrio. Nuestra residencia m&aacute;s rese&ntilde;ada. Un balc&oacute;n con vista, un rinc&oacute;n tranquilo de la ciudad, y todo lo que necesitas para sentirte en casa. Nombrada en honor a una abuela que ten&iacute;a el don de hacer que todos se sintieran bienvenidos.">Perched on the second floor with views over the neighborhood. Our most reviewed residence. A balcony with a view, a quiet corner of the city, and everything you need to feel at home. Named after a grandmother who had the gift of making everyone feel welcome.</p>
                 <a href="silvia.html" class="property-link">
                     <span data-en="Explore" data-es="Explorar">Explore</span>
                     <svg viewBox="0 0 16 16" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M3 8 L13 8 M9 4 L13 8 L9 12"/></svg>
                 </a>
                 <div class="plants-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M8 14V6"/><path d="M5 3c0 2 1.5 3 3 3s3-1 3-3"/><circle cx="6" cy="3" r="1.5" fill="none"/><circle cx="10" cy="3" r="1.5" fill="none"/><circle cx="8" cy="2" r="1.5" fill="none"/></svg> <span data-en="Balcony garden" data-es="Jard&iacute;n en balc&oacute;n">Balcony garden</span></div>
-                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit available" data-es="Kit de beb&eacute; disponible">Baby kit available</span></div>
+                <div class="plants-badge" style="color: var(--accent-text); border-color: rgba(139,99,85,0.25);"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="8" cy="6" r="4"/><path d="M4 14c0-2.2 1.8-4 4-4s4 1.8 4 4"/></svg> <span data-en="Baby kit — complimentary" data-es="Kit de beb&eacute; — sin costo">Baby kit — complimentary</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── RESIDENCE COMPARISON ─── -->
+    <section style="padding: 5rem 5%; background: var(--bg-alt);">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;" class="fade-in-up">
+            <span class="label" data-en="AT A GLANCE" data-es="DE UN VISTAZO">AT A GLANCE</span>
+            <h2 class="section-title" data-en="Find your perfect residence" data-es="Encuentra tu residencia ideal">Find your perfect residence</h2>
+            <div style="overflow-x: auto; margin-top: 3rem;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--divider);">
+                            <th style="padding: 1rem; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light);"></th>
+                            <th style="padding: 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 1rem; color: var(--text);"><a href="cecilia.html" style="color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent);">Cecilia</a></th>
+                            <th style="padding: 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 1rem; color: var(--text);"><a href="maria-elvira.html" style="color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent);">Mar&iacute;a Elvira</a></th>
+                            <th style="padding: 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 1rem; color: var(--text);"><a href="isabel.html" style="color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent);">Isabel</a></th>
+                            <th style="padding: 1rem; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 1rem; color: var(--text);"><a href="silvia.html" style="color: var(--text); text-decoration: none; border-bottom: 1px solid var(--accent);">Silvia</a></th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: var(--text-body);">
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Guests" data-es="Hu&eacute;spedes">Guests</td><td style="padding: 0.8rem 1rem;">8</td><td style="padding: 0.8rem 1rem;">6</td><td style="padding: 0.8rem 1rem;">2</td><td style="padding: 0.8rem 1rem;">2</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Bedrooms" data-es="Habitaciones">Bedrooms</td><td style="padding: 0.8rem 1rem;">3</td><td style="padding: 0.8rem 1rem;">2</td><td style="padding: 0.8rem 1rem;" data-en="Studio" data-es="Estudio">Studio</td><td style="padding: 0.8rem 1rem;" data-en="Studio" data-es="Estudio">Studio</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Beds" data-es="Camas">Beds</td><td style="padding: 0.8rem 1rem;">King + Queen + 2 singles</td><td style="padding: 0.8rem 1rem;">King + Queen</td><td style="padding: 0.8rem 1rem;">Queen</td><td style="padding: 0.8rem 1rem;">Queen</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Outdoor" data-es="Exterior">Outdoor</td><td style="padding: 0.8rem 1rem;" data-en="3 garden terraces" data-es="3 terrazas jard&iacute;n">3 garden terraces</td><td style="padding: 0.8rem 1rem;" data-en="Private terrace" data-es="Terraza privada">Private terrace</td><td style="padding: 0.8rem 1rem;">—</td><td style="padding: 0.8rem 1rem;" data-en="Balcony garden" data-es="Balc&oacute;n jard&iacute;n">Balcony garden</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Floor" data-es="Piso">Floor</td><td style="padding: 0.8rem 1rem;" data-en="Ground floor" data-es="Planta baja">Ground floor</td><td style="padding: 0.8rem 1rem;" data-en="1st floor (stairs)" data-es="1er piso (escaleras)">1st floor (stairs)</td><td style="padding: 0.8rem 1rem;" data-en="2nd floor (stairs)" data-es="2do piso (escaleras)">2nd floor (stairs)</td><td style="padding: 0.8rem 1rem;" data-en="2nd floor (stairs)" data-es="2do piso (escaleras)">2nd floor (stairs)</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Best for" data-es="Ideal para">Best for</td><td style="padding: 0.8rem 1rem;" data-en="Families &amp; groups" data-es="Familias y grupos">Families &amp; groups</td><td style="padding: 0.8rem 1rem;" data-en="Couples &amp; small families" data-es="Parejas y familias peque&ntilde;as">Couples &amp; small families</td><td style="padding: 0.8rem 1rem;" data-en="Remote workers &amp; long stays" data-es="Trabajo remoto y estad&iacute;as largas">Remote workers &amp; long stays</td><td style="padding: 0.8rem 1rem;" data-en="Peaceful retreats" data-es="Escapadas tranquilas">Peaceful retreats</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="Rating" data-es="Calificaci&oacute;n">Rating</td><td style="padding: 0.8rem 1rem; color: var(--gold);">&#9733; 4.96</td><td style="padding: 0.8rem 1rem; color: var(--gold);">&#9733; 4.87</td><td style="padding: 0.8rem 1rem; color: var(--gold);">&#9733; 4.95</td><td style="padding: 0.8rem 1rem; color: var(--gold);">&#9733; 4.87</td></tr>
+                        <tr style="border-bottom: 1px solid var(--divider);"><td style="padding: 0.8rem 1rem; color: var(--text-light); font-size: 0.65rem; letter-spacing: 1px; text-transform: uppercase;" data-en="From" data-es="Desde">From</td><td style="padding: 0.8rem 1rem; font-family: 'Playfair Display', Georgia, serif;">$320/night</td><td style="padding: 0.8rem 1rem; font-family: 'Playfair Display', Georgia, serif;">$220/night</td><td style="padding: 0.8rem 1rem; font-family: 'Playfair Display', Georgia, serif;">$150/night</td><td style="padding: 0.8rem 1rem; font-family: 'Playfair Display', Georgia, serif;">$140/night</td></tr>
+                        <tr><td style="padding: 0.8rem 1rem;"></td><td style="padding: 0.8rem 1rem;"><a href="cecilia.html" style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); text-decoration: none; border-bottom: 1px solid var(--accent);" data-en="Explore" data-es="Explorar">Explore</a></td><td style="padding: 0.8rem 1rem;"><a href="maria-elvira.html" style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); text-decoration: none; border-bottom: 1px solid var(--accent);" data-en="Explore" data-es="Explorar">Explore</a></td><td style="padding: 0.8rem 1rem;"><a href="isabel.html" style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); text-decoration: none; border-bottom: 1px solid var(--accent);" data-en="Explore" data-es="Explorar">Explore</a></td><td style="padding: 0.8rem 1rem;"><a href="silvia.html" style="font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); text-decoration: none; border-bottom: 1px solid var(--accent);" data-en="Explore" data-es="Explorar">Explore</a></td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -2146,7 +2143,7 @@
     <section class="faq">
         <div class="faq-header fade-in-up">
             <span class="label" data-en="Frequently Asked Questions" data-es="Preguntas frecuentes">Frequently Asked Questions</span>
-            <h2 class="section-title" data-en="Everything you need to know" data-es="Todo lo que necesitas saber">Everything you need to know</h2>
+            <h2 class="section-title" data-en="Common questions" data-es="Preguntas comunes">Common questions</h2>
         </div>
         <div class="faq-list fade-in-up">
             <div class="faq-item">
@@ -2304,6 +2301,7 @@
                 <input type="hidden" name="_subject" value="New inquiry from Casa Caravana website">
                 <input type="hidden" name="_next" value="https://sebastianoguerae.github.io/casa-caravana-web/?thanks=true">
                 <button type="submit" data-en="Send inquiry" data-es="Enviar mensaje">Send inquiry</button>
+                <p style="font-size: 0.7rem; color: var(--text-light); margin-top: 1rem; text-align: center;" data-en="We respond within 2 hours (9 AM – 9 PM Mexico City time)" data-es="Respondemos en menos de 2 horas (9 AM – 9 PM hora Ciudad de M&eacute;xico)">We respond within 2 hours (9 AM – 9 PM Mexico City time)</p>
                 <div id="formSuccess" style="display:none; font-size:0.85rem; color:#6B8F6B; margin-top:1rem;" data-en="Thank you! We'll get back to you soon." data-es="&iexcl;Gracias! Te responderemos pronto.">Thank you! We'll get back to you soon.</div>
             </form>
         </div>
@@ -2337,6 +2335,15 @@
                 </div>
             </div>
         </div>
+        <div style="text-align: center; margin: 2rem 0; padding-top: 2rem; border-top: 1px solid var(--divider);">
+            <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; margin-bottom: 0.5rem;" data-en="Stay in touch" data-es="Mant&eacute;n el contacto">Stay in touch</p>
+            <p style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 1rem;" data-en="Insider tips from Mariana: new restaurants, local events, seasonal updates." data-es="Tips de Mariana: nuevos restaurantes, eventos locales, novedades de temporada.">Insider tips from Mariana: new restaurants, local events, seasonal updates.</p>
+            <form action="https://formspree.io/f/mariana@lacaravanacreativa.com" method="POST" style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto;">
+                <input type="email" name="newsletter_email" placeholder="Your email" required aria-label="Email for newsletter" style="flex: 1; padding: 0.6rem 1rem; border: 1px solid var(--divider); background: var(--bg); font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: var(--text); outline: none;">
+                <input type="hidden" name="_subject" value="New newsletter signup - Casa Caravana">
+                <button type="submit" style="padding: 0.6rem 1.5rem; background: var(--accent); color: white; border: none; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer;" data-en="Subscribe" data-es="Suscribir">Subscribe</button>
+            </form>
+        </div>
         <div class="footer-bottom">
             &copy; 2026 Casa Caravana Boutique Residences &middot; Descartes 47, Mexico City
         </div>
@@ -2348,11 +2355,6 @@
         <a href="https://wa.me/525554304034" target="_blank" rel="noopener" class="bm-whatsapp">WhatsApp</a>
     </div>
 
-    <!-- ─── PERSISTENT BOOKING BAR ─── -->
-    <div class="booking-bar">
-        <p data-en="4 residences in Anzures, steps from Polanco" data-es="4 residencias en Anzures, a pasos de Polanco">4 residences in Anzures, steps from Polanco</p>
-        <a href="#contacto" data-en="Book Now" data-es="Reservar">Book Now</a>
-    </div>
 
     <!-- WhatsApp floating button (mobile) -->
     <a href="https://wa.me/525554304034" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact us on WhatsApp">
