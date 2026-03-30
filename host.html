@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Host — Mariana | Casa Caravana Boutique Residences</title>
+    <meta name="description" content="Meet Mariana, the heart of Casa Caravana. Superhost with 195+ reviews and a 4.91 rating. Discover her story and her philosophy of care.">
+    <link rel="icon" type="image/jpeg" href="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #FDFBF9;
+            --bg-alt: #F5F0EC;
+            --accent: #C08B7A;
+            --accent-text: #8B6355;
+            --accent-hover: #A8756A;
+            --text: #2B2B2B;
+            --text-body: #5C5650;
+            --text-light: #9A948D;
+            --divider: #E8E2DB;
+            --gold: #C4A265;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            color: var(--text-body);
+            background: var(--bg);
+            line-height: 2.0;
+            font-size: 1rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.15;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .label {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── NAVIGATION ─── */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 3rem;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(253, 251, 249, 0.97);
+            box-shadow: 0 1px 0 var(--divider);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .nav-logo-img {
+            height: 32px;
+            width: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .nav-logo-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.4);
+            transition: background 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-divider {
+            background: var(--divider);
+        }
+
+        .nav-logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .nav-logo-text {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #fff;
+            transition: color 0.4s ease;
+        }
+
+        .nav-logo-subtitle {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.55rem;
+            font-weight: 300;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-logo-text {
+            color: var(--text);
+        }
+
+        .nav.scrolled .nav-logo-subtitle {
+            color: var(--text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .nav-links a {
+            color: var(--text-body);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav.scrolled .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links .btn-reservar {
+            padding: 0.55rem 1.5rem;
+            border: 1px solid var(--accent-text);
+            color: var(--accent-text);
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links .btn-reservar:hover {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .lang-switcher {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.9);
+            transition: color 0.4s ease;
+        }
+
+        .nav.scrolled .lang-switcher {
+            color: var(--text-body);
+        }
+
+        .lang-switcher a {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lang-switcher a:hover {
+            color: var(--accent);
+        }
+
+        .lang-switcher a.active {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 1.5px;
+            background: #fff;
+            transition: background 0.4s ease, transform 0.3s ease;
+            display: block;
+        }
+
+        .nav.scrolled .hamburger span {
+            background: var(--text);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+
+        .mobile-menu.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .mobile-menu a {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        /* ─── HERO ─── */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.30), transparent);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 6rem;
+            left: 3rem;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.05;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+        }
+
+        /* ─── INTRO ─── */
+
+        .intro {
+            padding: 10rem 2rem;
+            text-align: center;
+        }
+
+        .intro-inner {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            line-height: 2.1;
+            color: var(--text-body);
+        }
+
+        .thin-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--divider);
+            margin: 4rem auto 0;
+        }
+
+        /* ─── OUR STORY ─── */
+
+        .our-story {
+            padding: 6rem 2rem 10rem;
+            text-align: center;
+        }
+
+        .our-story-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .our-story p {
+            font-size: 0.98rem;
+            line-height: 2.1;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
+        }
+
+        .our-story p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .grandmothers-line {
+            margin-top: 3.5rem;
+            text-align: center;
+        }
+
+        .grandmothers-names {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .grandmothers-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--accent);
+            margin: 1rem auto;
+        }
+
+        .grandmothers-caption {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── FULL WIDTH IMAGE BREAK ─── */
+
+        .image-break {
+            width: 100%;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        /* ─── PROPERTIES ─── */
+
+        .properties {
+            padding: 10rem 2rem;
+        }
+
+        .properties-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 6rem;
+        }
+
+        .property-row {
+            display: flex;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 4rem;
+            margin-bottom: 8rem;
+        }
+
+        .property-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .property-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .property-image {
+            flex: 0 0 58%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            transition: transform 0.6s ease;
+        }
+
+        .property-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .property-text {
+            flex: 1;
+            padding: 2rem 0;
+        }
+
+        .property-name {
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            margin-bottom: 0.3rem;
+        }
+
+        .property-type {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: var(--accent-text);
+            margin-bottom: 0.75rem;
+        }
+
+        .property-meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .property-rating {
+            color: var(--gold);
+        }
+
+        .property-price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        .property-specs {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .property-desc {
+            font-size: 0.95rem;
+            line-height: 1.9;
+            margin-bottom: 2rem;
+        }
+
+        .property-link {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .property-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .property-link svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .property-link:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* ─── DETAILS MOSAIC ─── */
+
+        .details {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .details-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-item {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .detail-item:nth-child(2) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item:nth-child(5) {
+            aspect-ratio: 3 / 3.2;
+        }
+
+        .detail-item img {
+            transition: transform 0.6s ease;
+        }
+
+        .detail-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .detail-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(43, 43, 43, 0);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            transition: background 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay {
+            background: rgba(43, 43, 43, 0.3);
+        }
+
+        .detail-overlay span {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .detail-item:hover .detail-overlay span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── LOCATION ─── */
+
+        .location {
+            padding: 10rem 2rem;
+        }
+
+        .location-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .location-places {
+            padding-top: 1rem;
+        }
+
+        .location-place {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--divider);
+            font-size: 0.92rem;
+        }
+
+        .location-place:first-child {
+            padding-top: 0;
+        }
+
+        .location-time {
+            color: var(--accent-text);
+            font-size: 0.82rem;
+        }
+
+        .location-map {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--bg-alt);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .location-note {
+            max-width: 700px;
+            margin: 4rem auto 0;
+            text-align: center;
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── REVIEWS ─── */
+
+        .reviews {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .reviews-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review-item {
+            padding: 2rem 0;
+        }
+
+        .review-quote-mark {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-author {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .reviews-stats {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .reviews-stats span {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.2rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .reviews-more {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .reviews-more a {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 1px solid var(--accent-text);
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .reviews-more a:hover {
+            color: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        /* ─── CONTACT ─── */
+
+        .contact {
+            padding: 10rem 2rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info h4 {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail-label {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p {
+            font-size: 0.92rem;
+        }
+
+        .contact-detail a {
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: var(--accent-hover);
+        }
+
+        .contact-links {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--divider);
+        }
+
+        .contact-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 0;
+            font-size: 0.88rem;
+            color: var(--text-body);
+            border-bottom: 1px solid var(--divider);
+            transition: color 0.3s ease;
+        }
+
+        .contact-link-item:hover {
+            color: var(--accent);
+        }
+
+        .contact-link-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 0;
+            border: none;
+            border-bottom: 1px solid var(--divider);
+            background: transparent;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-light);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            align-self: flex-start;
+            padding: 0.9rem 2.5rem;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ─── FOOTER ─── */
+
+        .footer {
+            background: var(--bg-alt);
+            padding: 5rem 3rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-brand-name {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text);
+        }
+
+        .footer-brand-tagline {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            justify-self: center;
+        }
+
+        .footer-nav a {
+            font-size: 0.82rem;
+            color: var(--text-body);
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent);
+        }
+
+        .footer-partner {
+            justify-self: end;
+            text-align: right;
+        }
+
+        .footer-partner p {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .footer-partner a {
+            font-size: 0.82rem;
+            color: var(--accent);
+            transition: color 0.3s ease;
+        }
+
+        .footer-partner a:hover {
+            color: var(--accent-hover);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        /* ─── RESPONSIVE ─── */
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                bottom: 5rem;
+                left: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 10vw, 3.5rem);
+            }
+
+            .intro {
+                padding: 6rem 1.5rem;
+            }
+
+            .our-story {
+                padding: 3rem 1.5rem 6rem;
+            }
+
+            .properties {
+                padding: 6rem 1.5rem;
+            }
+
+            .properties-header {
+                margin-bottom: 4rem;
+            }
+
+            .property-row,
+            .property-row.reverse {
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 5rem;
+            }
+
+            .property-image {
+                flex: none;
+                width: 100%;
+            }
+
+            .property-text {
+                padding: 0 0.5rem;
+            }
+
+            .details {
+                padding: 6rem 1.5rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .location {
+                padding: 6rem 1.5rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .location-map {
+                aspect-ratio: 16 / 10;
+            }
+
+            .reviews {
+                padding: 6rem 1.5rem;
+            }
+
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact {
+                padding: 6rem 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .footer {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-nav {
+                justify-self: start;
+            }
+
+            .footer-partner {
+                justify-self: start;
+                text-align: left;
+            }
+
+            .image-break {
+                height: 50vh;
+            }
+
+            .section-title {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            body {
+                padding-bottom: 54px;
+            }
+
+            .booking-bar-mobile {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 790;
+                height: 54px;
+                background: var(--bg);
+                border-top: 1px solid var(--divider);
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 0 1.5rem;
+            }
+            .booking-bar-mobile a {
+                flex: 1;
+                text-align: center;
+                padding: 0.6rem;
+                font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+                font-size: 0.65rem;
+                font-weight: 400;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .booking-bar-mobile .bm-book {
+                background: var(--accent);
+                color: #fff;
+            }
+            .booking-bar-mobile .bm-whatsapp {
+                background: #25D366;
+                color: #fff;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .booking-bar-mobile { display: none; }
+        }
+        /* ─── NEIGHBORHOOD GUIDE ─── */
+
+        .neighborhood-guide {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .neighborhood-guide-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .guide-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .guide-item p {
+            font-size: 0.95rem;
+            line-height: 2;
+        }
+
+        /* ─── EXPERIENCES / SERVICES ─── */
+
+        .experiences {
+            padding: 10rem 2rem;
+            background: var(--bg-alt);
+        }
+
+        .experiences-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .experience-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .experience-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1.5rem;
+            color: var(--accent);
+        }
+
+        .experience-icon svg {
+            width: 48px;
+            height: 48px;
+            stroke: var(--accent);
+            fill: none;
+        }
+
+        .experience-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card p {
+            font-size: 0.92rem;
+            line-height: 1.9;
+        }
+
+        /* ─── FAQ ACCORDION ─── */
+
+        .faq {
+            padding: 10rem 2rem;
+            background: var(--bg);
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 5rem;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--text);
+            line-height: 1.4;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            margin-left: 1rem;
+            font-size: 1.4rem;
+            font-weight: 200;
+            color: var(--accent);
+            transition: transform 0.3s ease;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 2;
+            color: var(--text-body);
+        }
+
+        @media (max-width: 768px) {
+            .neighborhood-guide {
+                padding: 6rem 1.5rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .experiences {
+                padding: 6rem 1.5rem;
+            }
+
+            .experiences-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq {
+                padding: 6rem 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ─── STATS BAR ─── */
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            padding: 3rem 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: var(--text);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        /* ─── BOTANICAL ELEMENTS ─── */
+
+        .botanical-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem auto;
+            max-width: 200px;
+        }
+
+        .botanical-divider svg {
+            width: 24px;
+            height: 24px;
+            opacity: 0.35;
+        }
+
+        .botanical-divider .line {
+            flex: 1;
+            height: 1px;
+            background: var(--divider);
+        }
+
+        .section-botanical {
+            position: absolute;
+            opacity: 0.06;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .botanical-accent {
+            display: inline-block;
+            vertical-align: middle;
+            opacity: 0.4;
+            margin: 0 0.3rem;
+        }
+
+        .botanical-stamp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--divider);
+            border-radius: 50%;
+            padding: 16px;
+            opacity: 0.5;
+        }
+
+        .botanical-stamp svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .property-botanical {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .intro-inner .botanical-corner {
+            display: block;
+            margin: 2rem auto 0;
+            opacity: 0.25;
+        }
+
+        /* Plants badge for property cards */
+        .plants-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #6B8F6B;
+            margin-top: 1rem;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba(107, 143, 107, 0.25);
+            border-radius: 2px;
+        }
+
+        .plants-badge svg {
+            width: 14px;
+            height: 14px;
+            stroke: #6B8F6B;
+            fill: none;
+        }
+        /* ─── WHATSAPP FLOATING BUTTON (mobile only) ─── */
+        .whatsapp-float {
+            display: none;
+            position: fixed;
+            bottom: 1.2rem;
+            right: 1.2rem;
+            z-index: 800;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.08); }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+        @media (max-width: 768px) {
+            .whatsapp-float { display: flex; }
+        }
+    
+        /* ─── HOST PAGE ─── */
+        .host-hero {
+            height: 50vh;
+            min-height: 400px;
+            background: var(--bg-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+        }
+        .host-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .host-hero p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            letter-spacing: 2px;
+        }
+        .host-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 3px solid var(--divider);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+        }
+        .host-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .host-avatar .placeholder {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 4rem;
+            color: var(--accent);
+        }
+        .host-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        .host-stat {
+            text-align: center;
+        }
+        .host-stat-value {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+        .host-stat-label {
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-top: 0.3rem;
+        }
+        .host-section {
+            padding: 5rem 2rem;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .host-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .host-section p {
+            font-size: 0.95rem;
+            line-height: 2.1;
+            color: var(--text-body);
+            margin-bottom: 1.5rem;
+        }
+        .host-quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text);
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--divider);
+            border-bottom: 1px solid var(--divider);
+            margin: 3rem 0;
+            line-height: 1.8;
+        }
+        .host-details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
+            margin: 3rem 0;
+        }
+        .host-details-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .host-promise-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .host-promise-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--divider);
+            font-size: 0.9rem;
+            color: var(--text-body);
+            display: flex;
+            gap: 1rem;
+            align-items: baseline;
+        }
+        .host-promise-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex-shrink: 0;
+            margin-top: 0.5rem;
+        }
+        .host-cta {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--bg-alt);
+        }
+        .host-cta h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .host-cta p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .host-cta a {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+        .host-cta a:hover { background: var(--accent-hover); }
+        @media (max-width: 768px) {
+            .host-details-grid { grid-template-columns: repeat(2, 1fr); }
+            .host-hero { height: auto; min-height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Casa Caravana" class="nav-logo-img" style="height:32px; object-fit:contain;">
+            <span class="nav-logo-divider" style="width:1px; height:24px; background:var(--divider); margin:0 0.6rem;"></span>
+            <span class="nav-logo-text" style="font-family:'Playfair Display',Georgia,serif; font-size:1.1rem; color:var(--text);">Casa Caravana</span>
+        </a>
+        <div class="nav-links">
+            <a href="cecilia.html">Cecilia</a>
+            <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
+            <a href="isabel.html">Isabel</a>
+            <a href="silvia.html">Silvia</a>
+            <a href="index.html#barrio">The Neighborhood</a>
+            <a href="index.html#contacto">Contact</a>
+            <a href="index.html#contacto" class="btn-reservar">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="host-hero">
+        <div>
+            <span class="label" style="display: block; margin-bottom: 2rem;">Your Host</span>
+            <div class="host-avatar">
+                <!-- Replace this placeholder with Mariana's photo: <img src="mariana.jpg" alt="Mariana"> -->
+                <span class="placeholder">M</span>
+            </div>
+            <h1>Mariana</h1>
+            <p>Superhost &middot; 4.91 rating &middot; 195+ reviews</p>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="host-stats">
+        <div class="host-stat">
+            <div class="host-stat-value">4.91</div>
+            <div class="host-stat-label">Overall rating</div>
+        </div>
+        <div class="host-stat">
+            <div class="host-stat-value">195+</div>
+            <div class="host-stat-label">Guest reviews</div>
+        </div>
+        <div class="host-stat">
+            <div class="host-stat-value">2+</div>
+            <div class="host-stat-label">Years hosting</div>
+        </div>
+        <div class="host-stat">
+            <div class="host-stat-value">4</div>
+            <div class="host-stat-label">Residences</div>
+        </div>
+        <div class="host-stat">
+            <div class="host-stat-value">5.0</div>
+            <div class="host-stat-label">Communication</div>
+        </div>
+        <div class="host-stat">
+            <div class="host-stat-value">5.0</div>
+            <div class="host-stat-label">Check-in</div>
+        </div>
+    </div>
+
+    <!-- Her Story -->
+    <section class="host-section">
+        <h2>The woman behind the welcome</h2>
+        <p>Mariana grew up in Mexico City surrounded by women who understood that hospitality is not a service &mdash; it's a language. Her grandmothers Cecilia, Mar&iacute;a Elvira, Isabel, and Silvia each had their own way of making people feel at home: a perfectly set table, a bed prepared with care, flowers from the garden, coffee ready before you woke up.</p>
+        <p>After years in design, she realized what she really wanted to build was not a space, but a feeling &mdash; the one she had as a child arriving at her grandmother's house. That door opening. That smell of something cooking. That sense that someone had been thinking about you before you arrived.</p>
+        <p>Casa Caravana is the result. Four residences in a classic Mexican casa in the Anzures neighborhood, each carrying the name and personality of one of those grandmothers. Not as a tribute on a wall, but as a living philosophy in every detail.</p>
+    </section>
+
+    <!-- Quote -->
+    <div class="host-quote">
+        &ldquo;I don't want my guests to feel like they booked a place. I want them to feel like they were expected.&rdquo;
+    </div>
+
+    <!-- Details grid (photos of her care) -->
+    <div class="host-details-grid">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg" alt="Casa Caravana terrace" loading="lazy">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1209567715223945602/original/a8a5cf92-8683-4867-b819-2c02bbbf49af.jpeg" alt="Bathroom amenities detail" loading="lazy">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/22063d0f-1a84-4cd9-ae9e-41ff602fe51c.jpeg" alt="Garden terrace" loading="lazy">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/42c8ed9f-0f8b-4cdd-97db-df216940ce2a.jpeg" alt="Workspace detail" loading="lazy">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/d4ae7ec0-50d7-4406-887e-8ce52ad32388.jpeg" alt="Hotel-quality linens" loading="lazy">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/bfde448a-b9f7-4245-af52-2f7969dda32e.jpeg" alt="Kitchen detail" loading="lazy">
+    </div>
+
+    <!-- Her philosophy -->
+    <section class="host-section">
+        <h2>What Mariana personally takes care of</h2>
+        <ul class="host-promise-list">
+            <li>48 hours before your arrival: WiFi credentials, building access code, parking details, and her personal phone number &mdash; everything you need, no surprises</li>
+            <li>A curated neighborhood guide on your nightstand &mdash; her favorite restaurants, caf&eacute;s, markets, and hidden corners of Anzures and Polanco</li>
+            <li>Hotel-quality linens, selected by hand. She notices thread count the way some people notice wine</li>
+            <li>Fresh coffee in your kitchen. Local, roasted in small batches, ready for your first morning</li>
+            <li>Plants in every corner &mdash; because her grandmothers taught her that a home without green things isn't really alive</li>
+            <li>Baby kit (crib, bath, high chair) prepared before you arrive &mdash; just ask in advance</li>
+            <li>Restaurant reservations, massage appointments, market tours, private transport &mdash; she connects you with her trusted local network</li>
+            <li>A personal message after check-in to make sure everything is perfect &mdash; and she means it</li>
+        </ul>
+    </section>
+
+    <!-- What guests say about her -->
+    <section class="host-section" style="background: var(--bg-alt); max-width: none; padding: 5rem 2rem;">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <h2>What guests say about Mariana</h2>
+            <div style="margin-top: 2rem;">
+                <div style="padding: 2rem 0; border-bottom: 1px solid var(--divider);">
+                    <p style="font-style: italic; margin-bottom: 0.8rem;">&ldquo;Mariana is an exceptional host &mdash; you can feel the care in every detail. From the moment we arrived, everything was thought of.&rdquo;</p>
+                    <span style="font-size: 0.75rem; color: var(--text-light);">Andrea &mdash; Cecilia, 3-bedroom residence</span>
+                </div>
+                <div style="padding: 2rem 0; border-bottom: 1px solid var(--divider);">
+                    <p style="font-style: italic; margin-bottom: 0.8rem;">&ldquo;Stayed for a month and didn't want to leave. The neighborhood recommendations alone were worth the trip. Mariana knows every corner of this city.&rdquo;</p>
+                    <span style="font-size: 0.75rem; color: var(--text-light);">Michael &mdash; Isabel, studio residence</span>
+                </div>
+                <div style="padding: 2rem 0; border-bottom: 1px solid var(--divider);">
+                    <p style="font-style: italic; margin-bottom: 0.8rem;">&ldquo;The best decision of our trip to Mexico. Three terraces, incredible breakfast spot around the corner, and a host who actually cares. We'll be back.&rdquo;</p>
+                    <span style="font-size: 0.75rem; color: var(--text-light);">Laura &mdash; Cecilia, 3-bedroom residence</span>
+                </div>
+                <div style="padding: 2rem 0;">
+                    <p style="font-style: italic; margin-bottom: 0.8rem;">&ldquo;Quiet, clean, perfectly located. Mariana sent us a list of restaurants and every single one was a hit. This is hospitality done right.&rdquo;</p>
+                    <span style="font-size: 0.75rem; color: var(--text-light);">Sarah &mdash; Silvia, studio with balcony</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="host-cta">
+        <h2>Experience Mariana's hospitality</h2>
+        <p>Choose your residence and let her take care of the rest.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="cecilia.html">Cecilia</a>
+            <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
+            <a href="isabel.html">Isabel</a>
+            <a href="silvia.html">Silvia</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="botanical-stamp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#C08B7A" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V14"/><path d="M12 14c0-4 5-7 9-6-1 5-5 7-9 6z"/><path d="M12 16c0-3-4-6-8-5 1 4 4 6 8 5z"/><path d="M12 10c0-3 3-5 6-5-0.5 3-3 5-6 5z"/><path d="M12 12c0-2-3-4-5-4 0.5 3 2 5 5 4z"/><path d="M12 7c0-2 2-4 4-4-0.5 2-2 4-4 4z"/><path d="M12 9c0-2-2-3-3-3 0.5 2 1 3 3 3z"/></svg>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-brand-name">Casa Caravana Boutique Residences</div>
+                <div class="footer-brand-tagline" data-en="Design residences in the heart of Polanco" data-es="Residencias de dise&ntilde;o en el coraz&oacute;n de Polanco">Design residences in the heart of Polanco</div>
+            </div>
+            <div class="footer-nav">
+                <a href="#espacios" data-en="Our Spaces" data-es="Espacios">Our Spaces</a>
+                <a href="#barrio" data-en="The Neighborhood" data-es="El Barrio">The Neighborhood</a>
+                <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+            <div class="footer-partner">
+                <p data-en="A sister project of" data-es="Un proyecto hermano de">A sister project of</p>
+                <a href="https://www.lacaravanacreativa.com/" target="_blank" rel="noopener">La Caravana Creativa</a>
+                <div style="margin-top: 1rem; display: flex; gap: 0.8rem;">
+                    <a href="https://www.instagram.com/casa_caravana_boutique/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.78rem; color: var(--accent);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        @casa_caravana_boutique
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin: 2rem 0; padding-top: 2rem; border-top: 1px solid var(--divider);">
+            <p style="font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; margin-bottom: 0.5rem;" data-en="Stay in touch" data-es="Mant&eacute;n el contacto">Stay in touch</p>
+            <p style="font-size: 0.75rem; color: var(--text-light); margin-bottom: 1rem;" data-en="Insider tips from Mariana: new restaurants, local events, seasonal updates." data-es="Tips de Mariana: nuevos restaurantes, eventos locales, novedades de temporada.">Insider tips from Mariana: new restaurants, local events, seasonal updates.</p>
+            <form action="https://formspree.io/f/mariana@lacaravanacreativa.com" method="POST" style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto;">
+                <input type="email" name="newsletter_email" placeholder="Your email" required aria-label="Email for newsletter" style="flex: 1; padding: 0.6rem 1rem; border: 1px solid var(--divider); background: var(--bg); font-family: 'Montserrat', sans-serif; font-size: 0.8rem; color: var(--text); outline: none;">
+                <input type="hidden" name="_subject" value="New newsletter signup - Casa Caravana">
+                <button type="submit" style="padding: 0.6rem 1.5rem; background: var(--accent); color: white; border: none; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer;" data-en="Subscribe" data-es="Suscribir">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Casa Caravana Boutique Residences &middot; Descartes 47, Mexico City
+        </div>
+    </footer>
+
+    <script>
+        var nav = document.getElementById('navbar');
+        if (nav) {
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 80) { nav.classList.add('scrolled'); }
+                else { nav.classList.remove('scrolled'); }
+            });
+        }
+    </script>
+</body>
+</html>
