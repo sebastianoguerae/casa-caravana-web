@@ -211,6 +211,55 @@
             color: var(--accent);
         }
 
+        /* Dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown-trigger {
+            cursor: pointer;
+        }
+
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 0;
+            min-width: 180px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--divider);
+            z-index: 100;
+            margin-top: 0.8rem;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu {
+            display: block;
+        }
+
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1.5rem;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--text) !important;
+            transition: color 0.2s, padding-left 0.2s;
+        }
+
+        .nav-dropdown-menu a:hover {
+            color: var(--accent) !important;
+            padding-left: 1.8rem;
+        }
+
+        .nav.scrolled .nav-dropdown-menu {
+            background: white;
+        }
+
         .nav-links .btn-reservar {
             padding: 0.55rem 1.5rem;
             border: 1px solid var(--accent-text);
@@ -1665,10 +1714,15 @@
             </span>
         </a>
         <div class="nav-links">
-            <a href="cecilia.html">Cecilia</a>
-            <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
-            <a href="isabel.html">Isabel</a>
-            <a href="silvia.html">Silvia</a>
+            <div class="nav-dropdown">
+                <a href="#espacios" class="nav-dropdown-trigger" data-en="Our Spaces" data-es="Espacios">Our Spaces <span style="font-size: 0.5rem; margin-left: 2px;">&#9662;</span></a>
+                <div class="nav-dropdown-menu">
+                    <a href="cecilia.html">Cecilia</a>
+                    <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
+                    <a href="isabel.html">Isabel</a>
+                    <a href="silvia.html">Silvia</a>
+                </div>
+            </div>
             <a href="host.html" data-en="Your Host" data-es="Tu Anfitriona">Your Host</a>
             <a href="blog/" data-en="Anzures Guide" data-es="Gu&iacute;a Anzures">Anzures Guide</a>
             <a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a>
@@ -1686,10 +1740,15 @@
 
     <!-- ─── MOBILE MENU ─── -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="cecilia.html" onclick="closeMenu()">Cecilia</a>
-        <a href="maria-elvira.html" onclick="closeMenu()">Mar&iacute;a Elvira</a>
-        <a href="isabel.html" onclick="closeMenu()">Isabel</a>
-        <a href="silvia.html" onclick="closeMenu()">Silvia</a>
+        <span style="font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light);" data-en="Our Spaces" data-es="Espacios">Our Spaces</span>
+        <div style="display: flex; gap: 1.5rem; margin: -1rem 0 0.5rem;">
+            <a href="cecilia.html" onclick="closeMenu()" style="font-size: 1.2rem;">Cecilia</a>
+            <a href="maria-elvira.html" onclick="closeMenu()" style="font-size: 1.2rem;">Mar&iacute;a Elvira</a>
+        </div>
+        <div style="display: flex; gap: 1.5rem; margin: -1rem 0 1rem;">
+            <a href="isabel.html" onclick="closeMenu()" style="font-size: 1.2rem;">Isabel</a>
+            <a href="silvia.html" onclick="closeMenu()" style="font-size: 1.2rem;">Silvia</a>
+        </div>
         <a href="host.html" onclick="closeMenu()" data-en="Your Host" data-es="Tu Anfitriona">Your Host</a>
         <a href="blog/" onclick="closeMenu()" data-en="Anzures Guide" data-es="Gu&iacute;a Anzures">Anzures Guide</a>
         <a href="#contacto" onclick="closeMenu()" data-en="Contact" data-es="Contacto">Contact</a>
