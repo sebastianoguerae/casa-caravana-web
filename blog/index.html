@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Casa Caravana | Mexico City Travel Tips from a Local Host</title>
+    <meta name="description" content="Travel tips, neighborhood guides, and insider knowledge about Mexico City — written by Mariana, host at Casa Caravana in Anzures.">
+    <meta property="og:title" content="Casa Caravana Blog — Mexico City Travel Tips from a Local Host">
+    <meta property="og:description" content="Travel tips, neighborhood guides, and insider knowledge about Mexico City — written by Mariana, host at Casa Caravana in Anzures.">
+    <meta property="og:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg">
+    <meta property="og:url" content="https://casacaravana.com/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Casa Caravana">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Casa Caravana Blog — Mexico City Travel Tips">
+    <meta name="twitter:description" content="Insider tips about Mexico City from a local Superhost with 195+ reviews.">
+    <meta name="twitter:image" content="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg">
+    <link rel="canonical" href="https://casacaravana.com/blog/">
+    <link rel="icon" type="image/jpeg" href="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_32,h_32,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #FDFBF9; --bg-alt: #F5F0EC; --accent: #C08B7A; --accent-text: #8B6355;
+            --accent-hover: #A8756A; --text: #2B2B2B; --text-body: #5C5650;
+            --text-light: #9A948D; --divider: #E8E2DB;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', -apple-system, 'Helvetica Neue', sans-serif;
+            font-weight: 300; color: var(--text-body); background: var(--bg);
+            line-height: 2.0; font-size: 1rem;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--text); line-height: 1.15; }
+        img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        a { color: inherit; text-decoration: none; }
+
+        .blog-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 3rem; background: var(--bg); border-bottom: 1px solid var(--divider); }
+        .blog-nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+        .blog-nav-logo img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+        .blog-nav-logo span { font-family: 'Playfair Display', Georgia, serif; font-size: 1.1rem; color: var(--text); }
+        .blog-nav-back { font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-text); transition: color 0.3s; }
+        .blog-nav-back:hover { color: var(--accent); }
+
+        .blog-header {
+            text-align: center; padding: 5rem 2rem 4rem; border-bottom: 1px solid var(--divider);
+        }
+        .blog-header h1 {
+            font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;
+        }
+        .blog-header p {
+            font-size: 0.9rem; color: var(--text-light); max-width: 500px; margin: 0 auto;
+        }
+
+        .blog-grid {
+            max-width: 1100px; margin: 0 auto; padding: 4rem 2rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+        }
+
+        .blog-card {
+            display: block; transition: transform 0.3s ease;
+        }
+        .blog-card:hover { transform: translateY(-4px); }
+
+        .blog-card-image {
+            width: 100%; height: 240px; overflow: hidden; margin-bottom: 1.5rem;
+        }
+        .blog-card-image img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.03);
+        }
+
+        .blog-card h2 {
+            font-size: 1.2rem; font-weight: 400; margin-bottom: 0.75rem; line-height: 1.3;
+        }
+        .blog-card p {
+            font-size: 0.85rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1rem;
+        }
+        .blog-card .read-more {
+            font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--accent-text); border-bottom: 1px solid var(--accent-text);
+            padding-bottom: 2px; transition: color 0.3s, border-color 0.3s;
+        }
+        .blog-card:hover .read-more {
+            color: var(--accent); border-color: var(--accent);
+        }
+
+        .blog-card.featured {
+            grid-column: 1 / -1;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;
+        }
+        .blog-card.featured .blog-card-image {
+            height: 320px; margin-bottom: 0;
+        }
+        .blog-card.featured h2 {
+            font-size: 1.5rem;
+        }
+
+        .blog-footer { background: var(--bg-alt); padding: 3rem; text-align: center; }
+        .blog-footer p { font-size: 0.75rem; color: var(--text-light); }
+        .blog-footer a { color: var(--accent); transition: color 0.3s; }
+        .blog-footer a:hover { color: var(--accent-hover); }
+
+        @media (max-width: 768px) {
+            .blog-nav { padding: 1rem 1.5rem; }
+            .blog-grid { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+            .blog-card.featured { grid-template-columns: 1fr; }
+            .blog-card.featured .blog-card-image { height: 240px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="blog-nav">
+        <a href="../index.html" class="blog-nav-logo">
+            <img src="https://static.wixstatic.com/media/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg/v1/crop/x_1650,y_480,w_2600,h_2100/fill/w_500,h_400,al_c,q_85,enc_auto/21725a_6705f169bc234ce784b4dd3b70f8f7f3~mv2.jpg" alt="Casa Caravana">
+            <span>Casa Caravana</span>
+        </a>
+        <a href="../index.html" class="blog-nav-back">Back to Casa Caravana</a>
+    </nav>
+
+    <div class="blog-header">
+        <h1>Notes from Anzures</h1>
+        <p>Travel tips, neighborhood guides, and insider knowledge about Mexico City — by Mariana, your host at Casa Caravana.</p>
+    </div>
+
+    <div class="blog-grid">
+
+        <!-- Featured: Anzures Guide (cornerstone) -->
+        <a href="anzures-neighborhood-guide.html" class="blog-card featured">
+            <div class="blog-card-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/fb7f153b-ec42-40f1-8d2c-3dfa7fcc0269.jpeg" alt="Anzures neighborhood, Mexico City" loading="lazy">
+            </div>
+            <div>
+                <h2>Anzures: The Mexico City Neighborhood Tourists Never Find</h2>
+                <p>When we chose where to open Casa Caravana, everyone said Polanco or Condesa. We chose Anzures. Here's why — from the morning bakery ritual to the jacaranda-lined streets to the market where the vendors know your name.</p>
+                <span class="read-more">Read Article</span>
+            </div>
+        </a>
+
+        <!-- Neighborhoods -->
+        <a href="best-neighborhoods-mexico-city.html" class="blog-card">
+            <div class="blog-card-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1211768589707757419/original/95ce6ce7-45e3-4c04-af05-41af8767c76a.jpeg" alt="Where to stay in Mexico City" loading="lazy">
+            </div>
+            <h2>Where to Stay in Mexico City: A Neighborhood Guide for First-Time Visitors</h2>
+            <p>Everyone asks me the same question: where should I stay? After hosting 195+ guests, here's my honest take on Polanco, Roma, Condesa, Centro, Coyoac&aacute;n — and the neighborhood tourists never find.</p>
+            <span class="read-more">Read Article</span>
+        </a>
+
+        <!-- Remote Work -->
+        <a href="working-remotely-mexico-city.html" class="blog-card">
+            <div class="blog-card-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/42c8ed9f-0f8b-4cdd-97db-df216940ce2a.jpeg" alt="Working remotely from Mexico City" loading="lazy">
+            </div>
+            <h2>Working Remotely from Mexico City: The Honest Guide</h2>
+            <p>At least half of our guests work from their laptops. Here's what I've learned from hosting digital nomads — WiFi speeds, cost of living, neighborhoods, visas, and the time zone advantage nobody talks about.</p>
+            <span class="read-more">Read Article</span>
+        </a>
+
+        <!-- Restaurants -->
+        <a href="best-restaurants-near-polanco.html" class="blog-card">
+            <div class="blog-card-image">
+                <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1193042271718383527/original/7512fa42-0588-4a7b-ae6b-441d303010e5.jpeg" alt="Restaurants near Polanco" loading="lazy">
+            </div>
+            <h2>Where to Eat Near Polanco: 12 Restaurants the Guides Don't Mention</h2>
+            <p>After every check-in, guests ask me the same thing: where should we eat? Not the Michelin places — they want to know where I eat. From $3 tacos to unforgettable dinners, here are my actual picks.</p>
+            <span class="read-more">Read Article</span>
+        </a>
+
+        <!-- Kids -->
+        <a href="mexico-city-with-kids.html" class="blog-card">
+            <div class="blog-card-image">
+                <img src="https://a0.muscache.com/im/pictures/airflow/Hosting-1211768589707757419/original/f88f55a8-c947-4291-a835-6c21be002230.jpg" alt="Mexico City with kids" loading="lazy">
+            </div>
+            <h2>Mexico City with Kids: What Nobody Tells You (But Should)</h2>
+            <p>Mexico City is one of the best family destinations in the world, and almost nobody knows it. Honest advice on safety, activities, strollers, pharmacies, and where to stay when you're traveling with little ones.</p>
+            <span class="read-more">Read Article</span>
+        </a>
+
+    </div>
+
+    <footer class="blog-footer">
+        <p>&copy; 2026 Casa Caravana Boutique Residences &middot; Descartes 47, Mexico City</p>
+        <p style="margin-top: 0.5rem;"><a href="../index.html">casacaravana.com</a> &middot; <a href="https://www.instagram.com/casa_caravana_boutique/" target="_blank" rel="noopener">Instagram</a></p>
+    </footer>
+
+</body>
+</html>
