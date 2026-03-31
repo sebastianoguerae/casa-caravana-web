@@ -226,13 +226,16 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            padding: 1rem 0;
+            padding-top: 1rem;
             min-width: 180px;
+            z-index: 100;
+        }
+
+        .nav-dropdown-menu-inner {
             background: white;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             border: 1px solid var(--divider);
-            z-index: 100;
-            margin-top: 0.8rem;
+            padding: 0.8rem 0;
         }
 
         .nav-dropdown:hover .nav-dropdown-menu {
@@ -256,7 +259,7 @@
             padding-left: 1.8rem;
         }
 
-        .nav.scrolled .nav-dropdown-menu {
+        .nav.scrolled .nav-dropdown-menu-inner {
             background: white;
         }
 
@@ -1717,10 +1720,12 @@
             <div class="nav-dropdown">
                 <a href="#espacios" class="nav-dropdown-trigger" data-en="Our Spaces" data-es="Espacios">Our Spaces <span style="font-size: 0.5rem; margin-left: 2px;">&#9662;</span></a>
                 <div class="nav-dropdown-menu">
-                    <a href="cecilia.html">Cecilia</a>
-                    <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
-                    <a href="isabel.html">Isabel</a>
-                    <a href="silvia.html">Silvia</a>
+                    <div class="nav-dropdown-menu-inner">
+                        <a href="cecilia.html">Cecilia</a>
+                        <a href="maria-elvira.html">Mar&iacute;a Elvira</a>
+                        <a href="isabel.html">Isabel</a>
+                        <a href="silvia.html">Silvia</a>
+                    </div>
                 </div>
             </div>
             <a href="host.html" data-en="Your Host" data-es="Tu Anfitriona">Your Host</a>
