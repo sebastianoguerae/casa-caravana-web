@@ -1702,6 +1702,24 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span style="font-size: 0.6rem; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light);">Our Spaces</span>
+        <div style="display: flex; gap: 1.5rem; margin: -1rem 0 0.5rem;">
+            <a href="cecilia.html" onclick="closeMenu()" style="font-size: 1.2rem;">Cecilia</a>
+            <a href="maria-elvira.html" onclick="closeMenu()" style="font-size: 1.2rem;">Mar&iacute;a Elvira</a>
+        </div>
+        <div style="display: flex; gap: 1.5rem; margin: -1rem 0 1rem;">
+            <a href="isabel.html" onclick="closeMenu()" style="font-size: 1.2rem;">Isabel</a>
+            <a href="silvia.html" onclick="closeMenu()" style="font-size: 1.2rem;">Silvia</a>
+        </div>
+        <a href="host.html" onclick="closeMenu()">Your Host</a>
+        <a href="guide.html" onclick="closeMenu()">Mariana&rsquo;s Picks</a>
+        <a href="blog/" onclick="closeMenu()">Anzures Guide</a>
+        <a href="index.html#contacto" onclick="closeMenu()">Contact</a>
+        <a href="index.html#contacto" onclick="closeMenu()" style="font-size:1rem; font-family:Montserrat,sans-serif; letter-spacing:3px; text-transform:uppercase; padding:0.7rem 2rem; border:1px solid var(--accent); color:var(--accent);">Book Now</a>
+    </div>
+
     <!-- Hero -->
     <section class="host-hero">
         <div>
@@ -1867,6 +1885,17 @@
                 if (window.scrollY > 80) { nav.classList.add('scrolled'); }
                 else { nav.classList.remove('scrolled'); }
             });
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+        function closeMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.remove('open');
         }
     </script>
 </body>
